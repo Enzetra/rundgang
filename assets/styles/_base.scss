@@ -7,12 +7,9 @@
 html {
     scroll-behavior: smooth;
 }
-body {
-    background-color: #D4D4D4;
-    //temp height
-    min-height: 100vh;
-    font-family: 'Darker Grotesque', sans-serif;
-}
+/* ===============================
+   FONT IMPORT
+   =============================== */
 
 @import url(https://fonts.googleapis.com/css?family=Darker+Grotesque:300,regular,500,600,700,800,900);
 
@@ -20,23 +17,73 @@ body {
 /* ===============================
    CORE COLOR PALETTE
    =============================== */
-$color-aqua:   #D9D9D9; // light aqua / background accent
-$color-pink:   #FF00BB; // vivid magenta accent
-$color-navy:   #2E2C34; // deep blue / main dark
-$color-lime:   #DAE022; // lime green / contrast accent
-$color-plum:   #8F2073; // plum / secondary dark
+    $bomull-light: #FFFFEB;
+    $bomull:  #FFFFDE;
+    $bomull-dark: #E4E4A0;
+
+    $ull-light: #FFFFFF;
+    $ull:     #EAE6F4;
+    $ull-dark: #D3CDE0;
+
+    $organza-light: #E3E6F4;
+    $organza: #C6C3E1;
+    $organza-dark: #A8A3C8;
+    
+    $linne-light:  #DCE7B7;
+    $linne:   #D3E18D;
+    $linne-dark:  #B2B74F;
+
+    $silke-light: #ED91C2;
+    $silke: #E578B7;
+    $silke-dark:  #D24992;
+
+    $sammet-light:  #B0277C;
+    $sammet:  #7D0E61;
+    $sammet-dark:  #50053D;
+
+    $lader-light: #432A2A;
+    $lader:   #1C0F0F;
+    $lader-dark:  #000000;
+
+/* ===============================
+   DESIGN TOKENS
+   =============================== */
+
+    // Surface tokens
+    $surface-background: $ull;
+    $surface-primary:    $organza;
+    $surface-secondary:  $bomull;
+    $surface-tertiary:   $linne;
+
+    $surface-CTA-light:  $silke-light;
+    $surface-CTA:        $silke;
+    $surface-CTA-dark:   $silke-dark;
+
+    $surface-invert-less:      $sammet-light;
+    $surface-invert:           $sammet;
+    $surface-invert-dark:      $sammet-dark;
+
+    // Text tokens
+    $text-darkened:   $lader-dark;
+    $text-primary:       $sammet;
+    $text-invert:      $ull;
+
+    $text-CTA-light:  $silke-light;
+    $text-CTA:        $silke;
+    $text-CTA-dark:   $silke-dark;
+
 
 /* ===============================
    TYPOGRAPHY
    =============================== */
-$font-primary: 'Darker Grotesque';
+
 
 
 /* ===============================
    BREAKPOINT VARIABLES
    =============================== */
 
-$breakpoint-mobile: 360px;   // small phones
+$breakpoint-mobile: 375px;   // small phones
 $breakpoint-tablet: 768px;   // iPads, small laptops
 $breakpoint-desktop: 1280px; // large screens
 

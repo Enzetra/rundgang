@@ -1,2 +1,9 @@
 @import 'base.scss';
 @import 'typography.scss';
+
+body {
+    background-color: $surface-background;
+    //temp height
+    min-height: 100vh;
+    font-family: 'Darker Grotesque', sans-serif;
+}
