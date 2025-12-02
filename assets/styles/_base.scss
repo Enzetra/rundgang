@@ -1,0 +1,43 @@
+//reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #D4D4D4;
+    //temp height
+    min-height: 100vh;
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Darker+Grotesque:300,regular,500,600,700,800,900);
+
+
+/* ===============================
+   CORE COLOR PALETTE
+   =============================== */
+$color-aqua:   #D9D9D9; // light aqua / background accent
+$color-pink:   #FF00BB; // vivid magenta accent
+$color-navy:   #2E2C34; // deep blue / main dark
+$color-lime:   #DAE022; // lime green / contrast accent
+$color-plum:   #8F2073; // plum / secondary dark
+
+/* ===============================
+   TYPOGRAPHY
+   =============================== */
+$font-primary: 'Darker Grotesque';
+
+
+/* ===============================
+   BREAKPOINT VARIABLES
+   =============================== */
+
+$breakpoint-mobile: 360px;   // small phones
+$breakpoint-tablet: 768px;   // iPads, small laptops
+$breakpoint-desktop: 1280px; // large screens
+
+
