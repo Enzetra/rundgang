@@ -55,7 +55,7 @@
    =============================== */
 
 
-@media (min-width: $breakpoint-mobile) {
+@media (max-width: $breakpoint-mobile) {
 
   h1 {
     font-size: 44px;     // from 64px

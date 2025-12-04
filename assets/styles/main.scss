@@ -1,9 +1,56 @@
 @import 'base.scss';
 @import 'typography.scss';
+@import 'animations.scss';
 
 body {
     background-color: $surface-background;
     //temp height
     min-height: 100vh;
     font-family: 'Darker Grotesque', sans-serif;
+}
+
+.navigation-top {
+    position: fixed;
+    background-color: $surface-background;
+    color: $text-primary;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    .ul-wrapper{
+        display: flex;
+        list-style: none; 
+        gap: 1.5rem;
+        li{
+            a{
+                text-decoration: none;
+                color: $text-primary;
+                font-weight: 700;
+                font-size: 20px;
+                &:hover{
+                    color: $text-CTA;
+                    
+                }
+            }
+    }
+    }
+}
+
+.hero-start{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .hero-text-wrapper{
+        
+        .hero-inner-text-wrapper-top{
+
+        }
+        .hero-inner-text-wrapper-bottom{
+            display: flex;
+            flex-direction: column;
+
+        }
+    }
 }

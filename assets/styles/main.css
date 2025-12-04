@@ -79,7 +79,7 @@ TABLET (≤ 1280px)
 /* ===============================
    MOBILE (≤ 375px)
    =============================== */
-@media (min-width: 375px) {
+@media (max-width: 375px) {
   h1 {
     font-size: 44px;
     font-weight: 900;
@@ -116,8 +116,80 @@ TABLET (≤ 1280px)
     line-height: 1.25;
   }
 }
+/* ===============================
+   UNDERLINE ANIMATION
+   =============================== */
+/* Underline animation utility
+   Use by adding the class `underline-anim` to anchor tags that should animate
+   the underline on hover/focus. */
+.underline-anim {
+  position: relative;
+  display: inline-block; /* allow absolute positioned pseudo element */
+  text-decoration: none; /* we'll create our own underline */
+  padding-bottom: 0.12em; /* give room for underline */
+  /* Reduce motion for users who prefer reduced motion */
+}
+.underline-anim::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.125em; /* thickness of the underline */
+  width: 100%;
+  background-color: currentColor; /* match link color */
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  pointer-events: none; /* don't interfere with clicks */
+}
+.underline-anim:hover::after, .underline-anim:focus::after {
+  transform: scaleX(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .underline-anim::after {
+    transition: none;
+    transform: scaleX(1);
+  }
+}
+
 body {
   background-color: #EAE6F4;
   min-height: 100vh;
   font-family: "Darker Grotesque", sans-serif;
+}
+
+.navigation-top {
+  position: fixed;
+  background-color: #EAE6F4;
+  color: #7D0E61;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.navigation-top .ul-wrapper {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+.navigation-top .ul-wrapper li a {
+  text-decoration: none;
+  color: #7D0E61;
+  font-weight: 700;
+  font-size: 20px;
+}
+.navigation-top .ul-wrapper li a:hover {
+  color: #E578B7;
+}
+
+.hero-start {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-start .hero-text-wrapper .hero-inner-text-wrapper-bottom {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,37 @@
+/* ===============================
+   UNDERLINE ANIMATION
+   =============================== */
+
+
+/* Underline animation utility
+   Use by adding the class `underline-anim` to anchor tags that should animate
+   the underline on hover/focus. */
+.underline-anim{
+    position: relative;
+    display: inline-block; /* allow absolute positioned pseudo element */
+    text-decoration: none; /* we'll create our own underline */
+    padding-bottom: 0.12em; /* give room for underline */
+
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 0.125em; /* thickness of the underline */
+        width: 100%;
+        background-color: currentColor; /* match link color */
+        transform-origin: left center;
+        transform: scaleX(0);
+        transition: transform 400ms cubic-bezier(.22,.61,.36,1);
+        pointer-events: none; /* don't interfere with clicks */
+    }
+
+    &:hover::after, &:focus::after{
+        transform: scaleX(1);
+    }
+
+    /* Reduce motion for users who prefer reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      &::after{ transition: none; transform: scaleX(1); }
+    }
+}
