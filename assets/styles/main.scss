@@ -40,6 +40,8 @@ body {
 
 .hero-start{
     position: relative;
+    min-height: 100vh;
+    max-height: 100vh;
     .hero-image{
     position: absolute;
     left: 50%;

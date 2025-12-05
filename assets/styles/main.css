@@ -186,6 +186,8 @@ body {
 
 .hero-start {
   position: relative;
+  min-height: 100vh;
+  max-height: 100vh;
   height: 100vh;
   display: flex;
   justify-content: center;
