@@ -81,3 +81,68 @@ body {
         }
     }
 }
+
+
+.main-start-card-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    
+    .main-start-card{
+        
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .main-start-card-text-box {
+            margin: 5rem, 5rem;
+        svg {
+            width: 100%;
+            height: auto;
+        }
+
+        text {
+            fill: $text-primary;
+        }
+
+        textPath {
+            transition: all 0.3s ease;
+        }
+}
+
+/* Hover animation (card hover triggers text animation) */
+.main-start-card:hover textPath {
+    animation: loopText 4s linear infinite;
+}
+
+@keyframes loopText {
+    from {
+        startOffset: 0%;
+    }
+    to {
+        startOffset: 100%;
+    }
+}
+
+        }
+
+ }
+
+    
+
+
+
+.kommision-card{
+background-image: url(/assets/img/pictures/kommision-card-picture.png);
+}
+.event-card{
+background-image: url(/assets/img/pictures/event-card-picture.png);
+}
+.collab-card{
+background-image: url(/assets/img/pictures/samarbete-card-pic.png);
+}
