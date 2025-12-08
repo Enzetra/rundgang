@@ -23,6 +23,9 @@ body {
         display: flex;
         list-style: none; 
         gap: 1.5rem;
+        .icon{
+            display: none;
+        }
         li{
             a{
                 text-decoration: none;
@@ -114,24 +117,14 @@ body {
             transition: all 0.3s ease;
         }
 }
-
-/* Hover animation (card hover triggers text animation) */
-.main-start-card:hover textPath {
-    animation: loopText 4s linear infinite;
+}
 }
 
-@keyframes loopText {
-    from {
-        startOffset: 0%;
-    }
-    to {
-        startOffset: 100%;
+.main-start-membership{
+    .main-start-membership-text-box{
+       color: $text-primary; 
     }
 }
-
-        }
-
- }
 
     
 
