@@ -2,6 +2,7 @@
 @import 'typography.scss';
 @import 'animations.scss';
 
+
 body {
     background-color: $surface-background;
     //temp height
@@ -85,6 +86,11 @@ body {
     }
 }
 
+main{
+    max-width: 1240px;
+    margin: 0 auto;
+    
+}
 
 .main-start-card-wrapper{
     display: flex;
@@ -126,7 +132,107 @@ body {
     }
 }
 
+.main-start-upcoming-events{
+    .main-start-upcoming-events-text-box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2{
+            color: $text-primary;
+        }
+    .see-all{
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+        gap: 0.75rem;
+        color: $text-primary;
+        background-color: $surface-background;
+        border: none;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 0.75rem 1.25rem;
+        &:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+    }
+    .main-start-upcoming-events-card-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        .main-start-upcoming-events-card{
+            background-color: $surface-primary;
+            padding: 1.25rem;
+            color: $text-primary;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+
+            .main-start-upcoming-events-card-text-box{
+
+            }
+            .main-start-upcoming-events-card-text-box-bottom{
+                display: flex;
+                justify-content: left;
+                gap: 0.75rem;
+                align-items: center;
+                padding: 0.75rem 0;
+            }
+
+        }
+    }
+}
+
+.footer-start{
+    width: 100vw; 
+    height: auto;
+    background-size: cover;
+    background-image: url('../img/illustrations/footer.svg');
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
     
+    .information-left{
+        display: flex;
+        flex-direction: column;
+        align-content: start;
+        gap: 6rem;
+        padding: 5% 0;
+
+        .info-top{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            a{
+                color: $text-primary;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .information-right{
+        display: flex;
+        flex-direction: column;
+        align-content: start;
+        gap: 6rem;
+        padding: 5% 1%;
+
+        p{
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+    }
+
+   }
 
 
 

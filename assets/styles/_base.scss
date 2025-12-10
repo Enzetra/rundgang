@@ -41,10 +41,6 @@ html {
     $sammet:  #7D0E61;
     $sammet-dark:  #50053D;
 
-    $lader-light: #432A2A;
-    $lader:   #1C0F0F;
-    $lader-dark:  #000000;
-
 /* ===============================
    DESIGN TOKENS
    =============================== */
@@ -64,7 +60,6 @@ html {
     $surface-invert-dark:      $sammet-dark;
 
     // Text tokens
-    $text-darkened:   $lader-dark;
     $text-primary:       $sammet;
     $text-invert:      $ull;
 
