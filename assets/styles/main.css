@@ -167,7 +167,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  z-index: 10;
+  z-index: 1000;
 }
 .navigation-top .ul-wrapper {
   display: flex;

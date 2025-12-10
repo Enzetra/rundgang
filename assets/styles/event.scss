@@ -6,6 +6,7 @@ body {
     background-color: $surface-background;
     //temp height
     min-height: 100vh;
+    min-width: 100vw;
     font-family: 'Darker Grotesque', sans-serif;
     color: $text-primary;
 }
@@ -15,7 +16,7 @@ body {
 }
 
 .container{
-    width: auto;
+    min-width: 100vw;
     display:flex;
     flex-direction: column;
     gap: 1.25rem;
@@ -24,8 +25,8 @@ body {
         position: relative;
 
         .hero-background{
-            width: 100vw;
-            height: 710px;
+            max-width: 100%;
+            height: auto;
         } 
 
         .hero-banner {
