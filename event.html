@@ -11,6 +11,7 @@
 
 <body> 
     <section class="container">
+
         <!--Navigation-->
         <nav class="navigation-top">
             <img src="assets/img/rundganglogga.svg" alt="logga">
@@ -32,7 +33,35 @@
 
         <!--Hero-->
         <section class="hero">
-            <div class="box"></div>
+            <!--picture and illustrations-->
+            <img class="hero-background" src="assets/img/pictures/hero-eventskalender.png" alt="hero-eventskalender">
+           
+            <!--text-->
+            <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="1520" 
+                height="297" 
+                viewBox="0 0 1280 297" 
+                class="hero-banner"
+                fill="none">
+
+                <path id="hero-path" 
+                    d="M-188.766 119.734C111.27 -67.9433 217.731 244.994 517.003 146.172C726.627 76.9526 819.102 111.957 996.322 203.206C1173.54 294.454 1457.33 186.185 1543.93 119.425" 
+                    stroke="#C6C3E1" 
+                    stroke-width="117"/>      
+                <text 
+                    font-size="96"
+                    font-family="darker grotesque, sans-serif"
+                    font-weight="700"
+                    fill="#7D0E61">
+                    <textPath href="#hero-path"
+                        startOffset="50%"
+                        text-anchor="middle"
+                        dy="-220em">
+                        · EVENTSKALENDER ·
+                    </textPath>
+                </text>
+            </svg>
         </section>
 
         <!--Cards events-->
@@ -124,22 +153,48 @@
 
             <section class="little-message">
                 <div class="image">
-                    <img src="assets/img/illustrations/heart-3.png" alt="heart">
                     <img src="assets/img/illustrations/bubble.png" alt="bubble">
-                    <img src="assets/img/illustrations/exclamation-point.png" alt="exclamation mark">
                 </div>
                 <div class="message-text">
                     <h2>...psst!</h2>
                     <p class="preamble">Vill du ha ditt nästa event hos oss? </p>
-                    <p class="link">Vill du ha ditt nästa event hos oss? </p>
-                </div>
-            </section>
-        </section>
-   
-    
-    <Footer>
+                    <p>Vill du ha ditt nästa event hos oss? </p>
+                    <a href="#" class="link">Läs mer här!</a> 
 
-    </Footer>
-     </section> 
+                </div>
+                
+            </section>
+   </section> 
+
+    <footer>
+        <section class="information-left">
+            <div class="info-top">
+                <a href="#"><h5>HEM</h5></a>
+                <a href="#"><h5>SÄLJA</h5></a>
+                <a href="#"><h5>SAMARBETEN</h5></a>
+                <a href="#"><h5>HÄNDER PÅ RUNDGÅNG</h5></a>
+                <a href="#"><h5>MEDLEMSKAP</h5></a>
+            </div>
+
+            <div class="info-bottom">
+                <img src="assets/img/illustrations/facebook-logo.svg" alt="facebook-and-instagram-logos">
+            </div>
+        </section>
+
+        <section class="information-right">
+            <div class="footer-logo">
+                <img src="assets/img/rundganglogga.svg" alt="rundgång-logo">
+            </div>
+            <div class="footer-adress">
+                <p class="adress">
+                    Tingvallagatan 7, <br> Karlstad
+                </p>
+                <p class="adress">MÅN-FRE 11-19</p>
+                <p class="adress">LÖR-SÖN 12-16</p>
+            </div>
+        </section>
+
+    </footer>
+    
 </body>
 </html>
