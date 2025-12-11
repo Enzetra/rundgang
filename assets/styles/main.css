@@ -459,11 +459,25 @@ body {
 .hero-start {
   position: relative;
   min-height: 100vh;
-  max-height: 100vh;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  /* --------------------------
+     HERO IMAGE (desktop base)
+     -------------------------- */
+  /* --------------------------
+     TEXT LAYER
+     -------------------------- */
+  /* -----------------------------------------
+     TABLET LANDSCAPE — max-width: 1024px
+     ----------------------------------------- */
+  /* -----------------------------------------
+     TABLET PORTRAIT — max-width: 768px
+     ----------------------------------------- */
+  /* -----------------------------------------
+     MOBILE — max-width: 480px
+     ----------------------------------------- */
 }
 .hero-start .hero-image {
   position: absolute;
@@ -471,86 +485,89 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
+  height: auto;
   transition: opacity 0.3s ease-in-out;
-}
-.hero-start h3 {
-  color: #EAE6F4;
-}
-.hero-start h5 {
-  color: #EAE6F4;
+  pointer-events: none;
 }
 .hero-start .hero-text-wrapper {
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.hero-start .hero-text-wrapper .hero-inner-text-wrapper-top {
   text-align: center;
+  padding: 1rem;
+}
+.hero-start .hero-text-wrapper h3,
+.hero-start .hero-text-wrapper h5 {
+  color: #EAE6F4;
+  margin: 0;
+}
+.hero-start .hero-text-wrapper .hero-inner-text-wrapper-top .hero-logo {
+  width: 80%;
+  max-width: 420px;
 }
 .hero-start .hero-text-wrapper .hero-inner-text-wrapper-bottom {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
   width: 100%;
+  max-width: 480px;
 }
-
-.main-start-card-wrapper {
-  max-width: 1240px;
-  margin: auto;
+.hero-start .hero-text-wrapper .hero-inner-text-wrapper-bottom .hero-inner-text-wrapper-bottom-inner-left,
+.hero-start .hero-text-wrapper .hero-inner-text-wrapper-bottom .hero-inner-text-wrapper-bottom-inner-right {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 0.25rem;
 }
-.main-start-card-wrapper .main-start-card {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (max-width: 1024px) {
+  .hero-start .hero-image {
+    width: 60%;
+  }
+  .hero-start .hero-text-wrapper .hero-logo {
+    width: 90%;
+  }
 }
-.main-start-card-wrapper .main-start-card .main-start-card-text-box {
-  margin: 5rem, 5rem;
+@media (max-width: 768px) {
+  .hero-start .hero-image {
+    width: 85%;
+  }
+  .hero-start .hero-text-wrapper {
+    padding: 2rem 1rem;
+  }
+  .hero-start .hero-text-wrapper .hero-inner-text-wrapper-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
 }
-.main-start-card-wrapper .main-start-card .main-start-card-text-box svg {
-  width: 100%;
-  height: auto;
-}
-.main-start-card-wrapper .main-start-card .main-start-card-text-box text {
-  fill: #7D0E61;
-}
-.main-start-card-wrapper .main-start-card .main-start-card-text-box textPath {
-  transition: all 0.3s ease;
+@media (max-width: 480px) {
+  .hero-start .hero-image {
+    width: 100%;
+  }
+  .hero-start .hero-text-wrapper .hero-inner-text-wrapper-top .hero-logo {
+    width: 100%;
+  }
 }
 
 .main-start-membership {
   width: 100vw;
   position: relative;
   height: 90vh;
-}
-.main-start-membership .arms-illustration {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 120%;
-  height: auto;
-  z-index: 0;
-}
-.main-start-membership .main-start-membership-arm-left {
-  display: none;
-  position: absolute;
-  left: -50%;
-  top: 20%;
-}
-.main-start-membership .main-start-membership-arm-right {
-  display: none;
-  position: absolute;
-  right: -200%;
-  bottom: -30%;
+  background-image: url("/assets/img/illustrations/arms.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  /* -----------------------------------------
+     DESKTOP ELEMENTS
+     ----------------------------------------- */
+  /* -----------------------------------------
+     TABLET LANDSCAPE — max-width: 1024px
+     ----------------------------------------- */
+  /* -----------------------------------------
+     TABLET PORTRAIT — max-width: 768px
+     ----------------------------------------- */
+  /* -----------------------------------------
+     MOBILE — max-width: 480px
+     ----------------------------------------- */
 }
 .main-start-membership .main-start-membership-text-box {
   position: absolute;
@@ -575,6 +592,48 @@ body {
 .main-start-membership .main-start-membership-text-box .read-more:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+@media (max-width: 1024px) {
+  .main-start-membership .main-start-membership-text-box {
+    top: 38%;
+    left: 10%;
+    max-width: 45vw;
+  }
+  .main-start-membership .main-start-membership-text-box .read-more {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .main-start-membership {
+    height: auto;
+    padding: 6rem 0;
+    background-size: cover;
+  }
+  .main-start-membership .main-start-membership-text-box {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 0 auto;
+    text-align: left;
+    max-width: 75vw;
+  }
+  .main-start-membership .main-start-membership-text-box .read-more {
+    font-size: 18px;
+    padding: 0.75rem 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .main-start-membership {
+    width: 100%;
+  }
+  .main-start-membership .main-start-membership-text-box {
+    max-width: 85vw;
+    padding: 0 1rem;
+  }
+  .main-start-membership .main-start-membership-text-box .read-more {
+    font-size: 16px;
+    padding: 0.65rem 1.25rem;
+  }
 }
 
 .main-start-upcoming-events {
