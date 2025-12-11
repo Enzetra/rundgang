@@ -529,10 +529,13 @@ body {
 }
 @media (max-width: 768px) {
   .hero-start .hero-image {
-    width: 85%;
+    width: 75%;
   }
   .hero-start .hero-text-wrapper {
     padding: 2rem 1rem;
+  }
+  .hero-start .hero-text-wrapper h3 {
+    font-size: 1.75rem;
   }
   .hero-start .hero-text-wrapper .hero-inner-text-wrapper-bottom {
     flex-direction: column;
@@ -544,9 +547,48 @@ body {
   .hero-start .hero-image {
     width: 100%;
   }
+  .hero-start .hero-text-wrapper h3 {
+    font-size: 1.35rem;
+  }
+  .hero-start .hero-text-wrapper h5 {
+    font-size: 0.95rem;
+  }
   .hero-start .hero-text-wrapper .hero-inner-text-wrapper-top .hero-logo {
     width: 100%;
   }
+}
+
+.main-start-card-wrapper {
+  max-width: 1240px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.main-start-card-wrapper .main-start-card {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  flex: 0 0 calc(33.333% - 3rem);
+  min-width: 300px;
+}
+.main-start-card-wrapper .main-start-card .main-start-card-text-box {
+  margin: 5rem, 5rem;
+}
+.main-start-card-wrapper .main-start-card .main-start-card-text-box svg {
+  width: 100%;
+  height: auto;
+}
+.main-start-card-wrapper .main-start-card .main-start-card-text-box text {
+  fill: #7D0E61;
+}
+.main-start-card-wrapper .main-start-card .main-start-card-text-box textPath {
+  transition: all 0.3s ease;
 }
 
 .main-start-membership {
@@ -556,6 +598,7 @@ body {
   background-image: url("/assets/img/illustrations/arms.svg");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
   /* -----------------------------------------
      DESKTOP ELEMENTS
      ----------------------------------------- */
