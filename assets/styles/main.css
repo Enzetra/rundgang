@@ -291,7 +291,7 @@ main {
 .main-start-upcoming-events .main-start-upcoming-events-card-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
 }
 .main-start-upcoming-events .main-start-upcoming-events-card-wrapper .main-start-upcoming-events-card {
@@ -301,6 +301,16 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+}
+.main-start-upcoming-events .main-start-upcoming-events-card-wrapper .main-start-upcoming-events-card .main-start-upcoming-events-card-text-box {
+  min-height: 0;
+}
+.main-start-upcoming-events .main-start-upcoming-events-card-wrapper .main-start-upcoming-events-card p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main-start-upcoming-events .main-start-upcoming-events-card-wrapper .main-start-upcoming-events-card .main-start-upcoming-events-card-text-box-bottom {
   display: flex;
