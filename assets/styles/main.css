@@ -365,7 +365,6 @@ TABLET (≤ 1280px)
   }
 }
 main {
-  max-width: 1240px;
   margin: 0 auto;
 }
 
@@ -457,6 +456,8 @@ body {
 }
 
 .main-start-card-wrapper {
+  max-width: 1240px;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -525,6 +526,10 @@ body {
   text-decoration: underline;
 }
 
+.main-start-upcoming-events {
+  max-width: 1240px;
+  margin: auto;
+}
 .main-start-upcoming-events .main-start-upcoming-events-text-box {
   display: flex;
   justify-content: space-between;
@@ -582,13 +587,15 @@ body {
 }
 
 .banderoll-wrapper {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 100%;
   overflow: hidden;
-  background-color: #E578B7;
+  background-color: #D3E18D;
 }
 
 .banderoll {
@@ -606,13 +613,12 @@ body {
 }
 
 .text-banderoll h3 {
+  color: #7D0E61;
   margin: 0;
 }
 
-.svg-banderoll svg {
-  height: 40px;
-  width: 40px;
-  fill: currentColor;
+.img-banderoll img {
+  padding-bottom: 1rem;
 }
 
 @keyframes scroll {

@@ -60,6 +60,8 @@ body {
 
 
 .main-start-card-wrapper{
+    max-width: 1240px;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,6 +146,8 @@ body {
 }
 
 .main-start-upcoming-events{
+    max-width: 1240px;
+    margin: auto;
     .main-start-upcoming-events-text-box{
         display: flex;
         justify-content: space-between;
@@ -211,13 +215,16 @@ body {
 
 
 .banderoll-wrapper {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
     padding-top: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     width: 100%;
     overflow: hidden;
-    background-color: $surface-CTA;
+    background-color: $surface-tertiary;
 }
 
 .banderoll {
@@ -235,13 +242,12 @@ body {
 }
 
 .text-banderoll h3 {
+    color: $text-primary;
     margin: 0;
 }
 
-.svg-banderoll svg {
-    height: 40px;
-    width: 40px;
-    fill: currentColor;
+.img-banderoll img {
+    padding-bottom: 1rem;
 }
 
 @keyframes scroll {
