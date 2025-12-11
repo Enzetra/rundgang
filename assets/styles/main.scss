@@ -34,6 +34,7 @@ body {
         transition: opacity 0.3s ease-in-out;
         pointer-events: none;     // ensures clicks go “through” the hero
     }
+    
 
     /* --------------------------
        TEXT LAYER
@@ -54,7 +55,7 @@ body {
 
         .hero-inner-text-wrapper-top {
             .hero-logo {
-                width: 80%;
+                width: 100%;
                 max-width: 420px;
             }
         }
@@ -83,7 +84,7 @@ body {
             width: 60%;
         }
         .hero-text-wrapper .hero-logo {
-            width: 90%;
+            width: 100%;
         }
     }
 
@@ -124,6 +125,82 @@ body {
     }
 }
 
+.main-start-card-wrapper {
+    max-width: 1244px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* -----------------------------
+   CARD (Desktop Layout)
+   ----------------------------- */
+.main-start-card {
+    flex: 1 1 calc(33.333% - 2rem);
+
+    /* Card size and look */
+                     // taller than wide
+    background-size: cover;          // fill card
+    background-repeat: no-repeat;    // you asked for this
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+
+    /* Ensure SVG fills width */
+    .main-start-card-text-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            width: 100%;   // full width of card
+            height: auto;
+            // display: block;
+        }
+    }
+}
+
+/* -----------------------------------------
+   TABLET (<=1024px) — Two cards per row
+   ----------------------------------------- */
+@media (max-width: 1024px) {
+    .main-start-card {
+        flex: 1 1 calc(50% - 2rem);
+        height: 80vh;
+    }
+}
+
+/* -----------------------------------------
+   MOBILE (<=768px) — One card per row
+   ----------------------------------------- */
+@media (max-width: 768px) {
+    .main-start-card {
+        flex: 0 1 100%;
+        height: 90vh;
+        
+
+        .main-start-card-text-box svg {
+            width: 100%;
+            // max-width: 360px;
+        }
+    }
+}
+
+/* -----------------------------------------
+   SMALL MOBILE (<=480px)
+   ----------------------------------------- */
+@media (max-width: 480px) {
+    .main-start-card {
+        height: 320px;
+    }
+}
 
 
 
