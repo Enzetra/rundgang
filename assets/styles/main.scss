@@ -1,6 +1,7 @@
 @import 'base.scss';
 @import 'typography.scss';
 @import 'animations.scss';
+@import 'layout.scss';
 
 
 
@@ -55,11 +56,7 @@ body {
     }
 }
 
-main{
-    max-width: 1240px;
-    margin: 0 auto;
-    
-}
+
 
 .main-start-card-wrapper{
     display: flex;
