@@ -1,6 +1,8 @@
 @import 'base.scss';
 @import 'typography.scss';
 @import 'animations.scss';
+@import 'layout.scss';
+
 
 
 body {
@@ -8,95 +10,140 @@ body {
     //temp height
     min-height: 100vh;
     font-family: 'Darker Grotesque', sans-serif;
+    overflow-x: hidden;
 }
 
-.navigation-top {
-    position: fixed;
-    background-color: $surface-background;
-    color: $text-primary;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    z-index: 1000;
-    .ul-wrapper{
-        display: flex;
-        list-style: none; 
-        gap: 1.5rem;
-        .icon{
-            display: none;
-        }
-        li{
-            a{
-                text-decoration: none;
-                color: $text-primary;
-                font-weight: 700;
-                font-size: 20px;
-                &:hover{
-                    color: $text-CTA;
-                    
-                }
-            }
-    }
-    }
-}
-
-.hero-start{
+.hero-start {
     position: relative;
-    min-height: 100vh;
-    max-height: 100vh;
-    .hero-image{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    transition: opacity 0.3s ease-in-out;
-    }
-    height: 100vh;
+    min-height: 100vh;   // allows hero to expand when image grows
     display: flex;
     justify-content: center;
     align-items: center;
-    h3{
-    color:  $text-invert;
-    }
-    h5{
-    color:  $text-invert;
+    overflow: hidden;     // keeps oversized image cleanly contained
+
+    /* --------------------------
+       HERO IMAGE (desktop base)
+       -------------------------- */
+    .hero-image {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;               // desktop default
+        height: auto;
+        transition: opacity 0.3s ease-in-out;
+        pointer-events: none;     // ensures clicks go “through” the hero
     }
 
-    .hero-text-wrapper{
+    /* --------------------------
+       TEXT LAYER
+       -------------------------- */
+    .hero-text-wrapper {
         z-index: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
-        
-        
-        .hero-inner-text-wrapper-top{
-            text-align: center;
+        text-align: center;
+        padding: 1rem;
+
+        h3,
+        h5 {
+            color: $text-invert;
+            margin: 0;
         }
-        .hero-inner-text-wrapper-bottom{
+
+        .hero-inner-text-wrapper-top {
+            .hero-logo {
+                width: 80%;
+                max-width: 420px;
+            }
+        }
+
+        .hero-inner-text-wrapper-bottom {
             display: flex;
             justify-content: space-between;
             margin-top: 1rem;
             width: 100%;
-            
+            max-width: 480px;
 
+            .hero-inner-text-wrapper-bottom-inner-left,
+            .hero-inner-text-wrapper-bottom-inner-right {
+                display: flex;
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+        }
+    }
+
+    /* -----------------------------------------
+       TABLET LANDSCAPE — max-width: 1024px
+       ----------------------------------------- */
+    @media (max-width: 1024px) {
+        .hero-image {
+            width: 60%;
+        }
+        .hero-text-wrapper .hero-logo {
+            width: 90%;
+        }
+    }
+
+    /* -----------------------------------------
+       TABLET PORTRAIT — max-width: 768px
+       ----------------------------------------- */
+    @media (max-width: 768px) {
+        .hero-image {
+            width: 75%;
+        }
+
+        .hero-text-wrapper {
+            padding: 2rem 1rem;
+
+            h3 {
+                font-size: 1.75rem;
+            }
+
+            .hero-inner-text-wrapper-bottom {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+        }
+    }
+
+    /* -----------------------------------------
+       MOBILE — max-width: 480px
+       ----------------------------------------- */
+    @media (max-width: 480px) {
+        .hero-image {
+            width: 100%;
+        }
+
+        .hero-text-wrapper {
+            h3 {
+                font-size: 1.35rem;
+            }
+
+            h5 {
+                font-size: 0.95rem;
+            }
+
+            .hero-inner-text-wrapper-top .hero-logo {
+                width: 100%;
+            }
         }
     }
 }
 
-main{
-    max-width: 1240px;
-    margin: 0 auto;
-    
-}
+
+
 
 .main-start-card-wrapper{
+    max-width: 1240px;
+    margin: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
     
     .main-start-card{
         
@@ -104,9 +151,11 @@ main{
         padding-bottom: 8rem;
         background-position: center;
         background-size: cover;
+        background-repeat: no-repeat;
         display: flex;
         justify-content: center;
-        align-items: center;
+        flex: 0 0 calc(33.333% - 3rem);
+        min-width: 300px;
 
         .main-start-card-text-box {
             margin: 5rem, 5rem;
@@ -126,13 +175,110 @@ main{
 }
 }
 
-.main-start-membership{
-    .main-start-membership-text-box{
-       color: $text-primary; 
+
+
+
+
+.main-start-membership {
+    width: 100vw;
+    position: relative;
+    height: 90vh;
+    background-image: url('/assets/img/illustrations/arms.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    /* -----------------------------------------
+       DESKTOP ELEMENTS
+       ----------------------------------------- */
+
+    .main-start-membership-text-box {
+        position: absolute;
+        top: 40%;
+        left: 15%;
+        color: $text-primary;
+        max-width: 35vw;
+
+        .read-more {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.75rem;
+            color: $text-primary;
+            background-color: $surface-CTA;
+            border: none;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 0.75rem 1.25rem;
+            margin-top: 2rem;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    /* -----------------------------------------
+       TABLET LANDSCAPE — max-width: 1024px
+       ----------------------------------------- */
+    @media (max-width: 1024px) {
+        .main-start-membership-text-box {
+            top: 38%;
+            left: 10%;
+            max-width: 45vw;
+
+            .read-more {
+                font-size: 18px;
+            }
+        }
+    }
+
+    /* -----------------------------------------
+       TABLET PORTRAIT — max-width: 768px
+       ----------------------------------------- */
+    @media (max-width: 768px) {
+        height: auto;
+        padding: 6rem 0;
+        background-size: cover; // fits better on portrait screens
+
+        .main-start-membership-text-box {
+            position: relative;
+            top: auto;
+            left: auto;
+            margin: 0 auto;
+            text-align: left;
+            max-width: 75vw;
+
+            .read-more {
+                font-size: 18px;
+                padding: 0.75rem 1.5rem;
+            }
+        }
+    }
+
+    /* -----------------------------------------
+       MOBILE — max-width: 480px
+       ----------------------------------------- */
+    @media (max-width: 480px) {
+        width: 100%;      // prevents mobile horizontal scroll (100vw can cause overflow)
+
+        .main-start-membership-text-box {
+            max-width: 85vw;
+            padding: 0 1rem;
+
+
+            .read-more {
+                font-size: 16px;
+                padding: 0.65rem 1.25rem;
+            }
+        }
     }
 }
 
 .main-start-upcoming-events{
+    max-width: 1240px;
+    margin: auto;
     .main-start-upcoming-events-text-box{
         display: flex;
         justify-content: space-between;
@@ -159,9 +305,12 @@ main{
     }
     .main-start-upcoming-events-card-wrapper{
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+
         gap: 2rem;
+        
 
         .main-start-upcoming-events-card{
             background-color: $surface-primary;
@@ -170,10 +319,22 @@ main{
             display: flex;
             flex-direction: column;
             gap: 0.75rem;
-
+            
+            
             .main-start-upcoming-events-card-text-box{
 
+            min-height: 0;
             }
+            
+            p{
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        
+
             .main-start-upcoming-events-card-text-box-bottom{
                 display: flex;
                 justify-content: left;
@@ -184,6 +345,48 @@ main{
 
         }
     }
+}
+
+
+.banderoll-wrapper {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    overflow: hidden;
+    background-color: $surface-tertiary;
+}
+
+.banderoll {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap; // Critical for horizontal roll
+    position: relative;
+}
+
+.banderoll-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 2rem;
+    animation: scroll 15s linear infinite;
+}
+
+.text-banderoll h3 {
+    color: $text-primary;
+    margin: 0;
+}
+
+.img-banderoll img {
+    padding-bottom: 1rem;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .footer-start{

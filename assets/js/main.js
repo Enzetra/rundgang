@@ -16,3 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 50); // fade timing
     }, 2000); // time between switches
 });
+
+//NAVIGATION 
+document.addEventListener("DOMContentLoaded", () => {
+    const menuIcon = document.getElementById("menuIcon");
+    const overlayMenu = document.getElementById("overlayMenu");
+
+    menuIcon.addEventListener("click", () => {
+    overlayMenu.classList.toggle("active");
+    });
+});
+

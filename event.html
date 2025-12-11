@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="stylesheet" href="assets/styles/event.css">
     <script src="assets/js/main.js"></script>
     <title>Eventkalender</title>
@@ -14,23 +13,44 @@
 
         <!--Navigation-->
         <nav class="navigation-top">
-            <img src="assets/img/rundganglogga.svg" alt="logga">
+            <a href="index.html">
+                <img src="assets/img/rundganglogga.svg" alt="logga" class="logga-desktop">
+                <img src="assets/img/logotyp symbol.svg" alt="logga-mobile" class="logga-mobile">
+            </a>    
 
             <ul class="ul-wrapper">
                 <li class="li-wrapper"><a class="underline-anim" href="#">SÄLJA</a></li>
                 <li class="li-wrapper"><a class="underline-anim" href="event.html">EVENT</a></li>
                 <li class="li-wrapper"><a class="underline-anim" href="#">SAMARBETE</a></li>
                 <li class="li-wrapper"><a class="underline-anim" href="#">TILLSAMMANS</a></li> 
-                <li class="li-wrapper icon">
-                    <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                            <path d="M0 1C0 0.45 0.56 0 1.24 0H16.76C17.44 0 18 0.45 18 1C18 1.55 17.44 2 16.76 2H1.24C0.56 2 0 1.55 0 1ZM17.1 8H0.9C0.4 8 0 8.45 0 9C0 9.55 0.4 10 0.9 10H17.1C17.6 10 18 9.55 18 9C18 8.45 17.6 8 17.1 8ZM17.1 16H0.9C0.4 16 0 16.45 0 17C0 17.55 0.4 18 0.9 18H17.1C17.6 18 18 17.55 18 17C18 16.45 17.6 16 17.1 16Z" fill="#7D0E61"/>
-                    </svg>
-                </a>
-                </li>
+                <li class="li-wrapper"><a class="underline-anim" href="#">EVENTSKALENDER</a></li> 
             </ul>
         </nav>
 
+        <!--Navigation mobile-->
+        <header class="header-mobile">
+            <div class="logo">
+                <img src="assets/img/logotyp symbol.svg" alt="logga-mobile" class="logga-mobile">  
+            </div>
+
+            <div class="menu-icon" id="menuIcon">
+                <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 18 18" fill="none">
+                        <path d="M0 1C0 0.45 0.56 0 1.24 0H16.76C17.44 0 18 0.45 18 1C18 1.55 17.44 2 16.76 2H1.24C0.56 2 0 1.55 0 1ZM17.1 8H0.9C0.4 8 0 8.45 0 9C0 9.55 0.4 10 0.9 10H17.1C17.6 10 18 9.55 18 9C18 8.45 17.6 8 17.1 8ZM17.1 16H0.9C0.4 16 0 16.45 0 17C0 17.55 0.4 18 0.9 18H17.1C17.6 18 18 17.55 18 17C18 16.45 17.6 16 17.1 16Z" fill="#7D0E61"/>
+                </svg>
+            </a>
+            </div>
+        </header>
+
+        <!-- Overlay -->
+        <nav class="overlay-mobile" id="overlayMenu">
+            <a href="#">SÄLJA</a>
+            <a href="event.html">EVENT</a>
+            <a href="#">SAMARBETE</a>
+            <a href="#">TILLSAMMANS</a>
+            <a href="#">EVENTSKALENDER</a>
+        </nav>
+        
         <!--Hero-->
         <section class="hero">
             <!--picture and illustrations-->
@@ -43,8 +63,7 @@
            
             <!--text-->
             <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                width="1520" 
+                xmlns="http://www.w3.org/2000/svg"  
                 height="297" 
                 viewBox="0 0 1280 297" 
                 class="hero-banner"
@@ -81,7 +100,7 @@
                     <img src="assets/img/pictures/12-decembre.png" alt="workshop-upcycling">
 
                     <div class="card-text">
-                        <h4>Workshop! Up-cycling med Thea</h4>
+                        <h3>Workshop! Up-cycling med Thea</h3>
                         <p>Thea Svanberg kommer till Rundgång och delar sina bästa tips för att ge dina plagg och prylar nytt liv! </p>
 
                         <div class="text-bottom">
@@ -96,7 +115,7 @@
                     <img src="assets/img/pictures/19-december.png" alt="Virka-med-Miriam!">
 
                     <div class="card-text">
-                        <h4>Virka med Miriam!</h4>
+                        <h3>Virka med Miriam!</h3>
                         <p>Thea Svanberg kommer till Rundgång och delar sina bästa tips för att ge dina plagg och prylar nytt liv!  </p>
 
                         <div class="text-bottom">
@@ -111,7 +130,7 @@
                     <img src="assets/img/pictures/2-januari.png" alt="Vinylkväll">
 
                     <div class="card-text">
-                        <h4>Vinylkväll! 3 för 2 </h4>
+                        <h3>Vinylkväll! 3 för 2 </h3>
                         <p>Thea Svanberg kommer till Rundgång och delar sina bästa tips för att ge dina plagg och prylar nytt liv! </p>
 
                         <div class="text-bottom">
@@ -126,7 +145,7 @@
                     <img src="assets/img/pictures/13-januari.png" alt="Workshop">
 
                     <div class="card-text">
-                        <h4>Workshop! Hållbar textilprint med Elsa </h4>
+                        <h3>Workshop! Hållbar textilprint med Elsa </h3>
                         <p>Thea Svanberg kommer till Rundgång och delar sina bästa tips för att ge dina plagg och prylar nytt liv! </p>
 
                         <div class="text-bottom">
@@ -141,7 +160,7 @@
                     <img src="assets/img/pictures/23-januari.png" alt="läderjackan">
 
                     <div class="card-text">
-                        <h4>Länge leve läderjackan! 20% på allt</h4>
+                        <h3>Länge leve läderjackan! 20% på allt</h3>
                         <p>Thea Svanberg kommer till Rundgång och delar sina bästa tips för att ge dina plagg och prylar nytt liv! </p>
 
                         <div class="text-bottom">
