@@ -25,7 +25,8 @@ body {
         position: relative;
 
         .hero-background{
-            max-width: 100%;
+            background-size: cover;
+            width: 100%;
             height: auto;
         } 
 
@@ -61,6 +62,7 @@ body {
             flex-wrap: wrap;
             gap: 1.25rem;
             padding: 1rem;
+            align-items: stretch;
 
             img{
                 max-width: 100%;
@@ -72,7 +74,13 @@ body {
                 flex-direction: column;
                 gap: 1rem;
 
-
+                p{
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                }
 
                 .text-bottom{
                     display: flex;
@@ -140,51 +148,4 @@ body {
    }
 }
 
-   footer{
-    width: 100vw; 
-    height: auto;
-    background-size: cover;
-    background-image: url('../img/illustrations/footer.svg');
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-
-    
-    .information-left{
-        display: flex;
-        flex-direction: column;
-        align-content: start;
-        gap: 6rem;
-        padding: 5% 0;
-
-        .info-top{
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-
-            a{
-                color: $text-primary;
-                text-decoration: none;
-            }
-        }
-    }
-
-    .information-right{
-        display: flex;
-        flex-direction: column;
-        align-content: start;
-        gap: 6rem;
-        padding: 5% 1%;
-
-        p{
-            font-size: 1.5rem;
-            font-style: normal;
-            font-weight: 900;
-            line-height: normal;
-            text-transform: uppercase;
-        }
-    }
-
-   }
-
+   

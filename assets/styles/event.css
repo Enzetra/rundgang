@@ -174,7 +174,8 @@ body {
   position: relative;
 }
 .container .hero .hero-background {
-  max-width: 100%;
+  background-size: cover;
+  width: 100%;
   height: auto;
 }
 .container .hero .hero-banner {
@@ -202,6 +203,7 @@ body {
   flex-wrap: wrap;
   gap: 1.25rem;
   padding: 1rem;
+  align-items: stretch;
 }
 .container .kommande-events .cards-events .card-events img {
   max-width: 100%;
@@ -211,6 +213,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+.container .kommande-events .cards-events .card-events .card-text p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .container .kommande-events .cards-events .card-events .card-text .text-bottom {
   display: flex;
@@ -262,45 +271,4 @@ body {
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
-}
-
-footer {
-  width: 100vw;
-  height: auto;
-  background-size: cover;
-  background-image: url("../img/illustrations/footer.svg");
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-}
-footer .information-left {
-  display: flex;
-  flex-direction: column;
-  align-content: start;
-  gap: 6rem;
-  padding: 5% 0;
-}
-footer .information-left .info-top {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-footer .information-left .info-top a {
-  color: #7D0E61;
-  text-decoration: none;
-}
-footer .information-right {
-  display: flex;
-  flex-direction: column;
-  align-content: start;
-  gap: 6rem;
-  padding: 5% 1%;
-}
-footer .information-right p {
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
-  text-transform: uppercase;
 }/*# sourceMappingURL=event.css.map */

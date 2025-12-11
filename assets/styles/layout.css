@@ -152,146 +152,36 @@ TABLET (≤ 1280px)
   }
 }
 
-body {
+.navigation-top {
+  position: fixed;
   background-color: #EAE6F4;
-  min-height: 100vh;
-  font-family: "Darker Grotesque", sans-serif;
-}
-
-.hero-start {
-  position: relative;
-  min-height: 100vh;
-  max-height: 100vh;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.hero-start .hero-image {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  transition: opacity 0.3s ease-in-out;
-}
-.hero-start h3 {
-  color: #EAE6F4;
-}
-.hero-start h5 {
-  color: #EAE6F4;
-}
-.hero-start .hero-text-wrapper {
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.hero-start .hero-text-wrapper .hero-inner-text-wrapper-top {
-  text-align: center;
-}
-.hero-start .hero-text-wrapper .hero-inner-text-wrapper-bottom {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-  width: 100%;
-}
-
-main {
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
-.main-start-card-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-.main-start-card-wrapper .main-start-card {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.main-start-card-wrapper .main-start-card .main-start-card-text-box {
-  margin: 5rem, 5rem;
-}
-.main-start-card-wrapper .main-start-card .main-start-card-text-box svg {
-  width: 100%;
-  height: auto;
-}
-.main-start-card-wrapper .main-start-card .main-start-card-text-box text {
-  fill: #7D0E61;
-}
-.main-start-card-wrapper .main-start-card .main-start-card-text-box textPath {
-  transition: all 0.3s ease;
-}
-
-.main-start-membership .main-start-membership-text-box {
   color: #7D0E61;
-}
-
-.main-start-upcoming-events .main-start-upcoming-events-text-box {
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
 }
-.main-start-upcoming-events .main-start-upcoming-events-text-box h2 {
-  color: #7D0E61;
-}
-.main-start-upcoming-events .main-start-upcoming-events-text-box .see-all {
+.navigation-top .ul-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.75rem;
+  list-style: none;
+  gap: 1.5rem;
+}
+.navigation-top .ul-wrapper .icon {
+  display: none;
+}
+.navigation-top .ul-wrapper li a {
+  text-decoration: none;
   color: #7D0E61;
-  background-color: #EAE6F4;
-  border: none;
-  font-size: 20px;
   font-weight: 700;
-  padding: 0.75rem 1.25rem;
+  font-size: 20px;
 }
-.main-start-upcoming-events .main-start-upcoming-events-text-box .see-all:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-.main-start-upcoming-events .main-start-upcoming-events-card-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
-}
-.main-start-upcoming-events .main-start-upcoming-events-card-wrapper .main-start-upcoming-events-card {
-  background-color: #C6C3E1;
-  padding: 1.25rem;
-  color: #7D0E61;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-.main-start-upcoming-events .main-start-upcoming-events-card-wrapper .main-start-upcoming-events-card .main-start-upcoming-events-card-text-box {
-  min-height: 0;
-}
-.main-start-upcoming-events .main-start-upcoming-events-card-wrapper .main-start-upcoming-events-card p {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.main-start-upcoming-events .main-start-upcoming-events-card-wrapper .main-start-upcoming-events-card .main-start-upcoming-events-card-text-box-bottom {
-  display: flex;
-  justify-content: left;
-  gap: 0.75rem;
-  align-items: center;
-  padding: 0.75rem 0;
+.navigation-top .ul-wrapper li a:hover {
+  color: #E578B7;
 }
 
-.footer-start {
+footer {
   width: 100vw;
   height: auto;
   background-size: cover;
@@ -301,45 +191,33 @@ main {
   justify-content: space-between;
   padding: 1rem;
 }
-.footer-start .information-left {
+footer .information-left {
   display: flex;
   flex-direction: column;
   align-content: start;
   gap: 6rem;
   padding: 5% 0;
 }
-.footer-start .information-left .info-top {
+footer .information-left .info-top {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.footer-start .information-left .info-top a {
+footer .information-left .info-top a {
   color: #7D0E61;
   text-decoration: none;
 }
-.footer-start .information-right {
+footer .information-right {
   display: flex;
   flex-direction: column;
   align-content: start;
   gap: 6rem;
   padding: 5% 1%;
 }
-.footer-start .information-right p {
+footer .information-right p {
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
   text-transform: uppercase;
-}
-
-.kommision-card {
-  background-image: url(/assets/img/pictures/kommision-card-picture.png);
-}
-
-.event-card {
-  background-image: url(/assets/img/pictures/event-card-picture.png);
-}
-
-.collab-card {
-  background-image: url(/assets/img/pictures/samarbete-card-pic.png);
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=layout.css.map */
