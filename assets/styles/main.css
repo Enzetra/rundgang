@@ -384,6 +384,7 @@ body {
   background-color: #EAE6F4;
   min-height: 100vh;
   font-family: "Darker Grotesque", sans-serif;
+  overflow-x: hidden;
 }
 
 .hero-start {
@@ -454,8 +455,44 @@ body {
   transition: all 0.3s ease;
 }
 
+.main-start-membership {
+  width: 100vw;
+  position: relative;
+  height: 90vh;
+}
+.main-start-membership .main-start-membership-arm-left {
+  position: absolute;
+  left: -50%;
+  top: 20%;
+}
+.main-start-membership .main-start-membership-arm-right {
+  position: absolute;
+  right: -200%;
+  bottom: -30%;
+}
 .main-start-membership .main-start-membership-text-box {
+  position: absolute;
+  top: 40%;
+  left: 15%;
   color: #7D0E61;
+  max-width: 35vw;
+}
+.main-start-membership .main-start-membership-text-box .read-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  color: #7D0E61;
+  background-color: #E578B7;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  margin-top: 2rem;
+}
+.main-start-membership .main-start-membership-text-box .read-more:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .main-start-upcoming-events .main-start-upcoming-events-text-box {

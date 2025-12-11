@@ -10,6 +10,7 @@ body {
     //temp height
     min-height: 100vh;
     font-family: 'Darker Grotesque', sans-serif;
+    overflow-x: hidden;
 }
 
 .hero-start{
@@ -93,8 +94,52 @@ body {
 }
 
 .main-start-membership{
+    width: 100vw;
+    position: relative;
+    height: 90vh;
+    // background-image: url('/assets/img/illustrations/arms.svg');
+    // background-position: center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // overflow: visible;
+
+    .main-start-membership-arm-left{
+        // display: none;
+        position: absolute;
+        left: -50%;
+        top: 20%;
+    }
+    .main-start-membership-arm-right{
+        // display: none;
+        position: absolute;
+        right: -200%;
+        bottom: -30%;
+
+    }
     .main-start-membership-text-box{
-       color: $text-primary; 
+        position: absolute;
+        top: 40%;
+        left: 15%;
+        color: $text-primary; 
+        max-width: 35vw;
+
+       .read-more{
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+        gap: 0.75rem;
+        color: $text-primary;
+        background-color: $surface-CTA;
+        border: none;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 0.75rem 1.25rem;
+        margin-top: 2rem;
+        &:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+       }
     }
 }
 
