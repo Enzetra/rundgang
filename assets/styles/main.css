@@ -80,7 +80,7 @@ TABLET (≤ 1280px)
 /* ===============================
    MOBILE (≤ 375px)
    =============================== */
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   h1 {
     font-size: 44px;
     font-weight: 900;
@@ -232,7 +232,7 @@ TABLET (≤ 1280px)
 /* ===============================
    MOBILE (≤ 375px)
    =============================== */
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   h1 {
     font-size: 44px;
     font-weight: 900;
@@ -316,6 +316,9 @@ TABLET (≤ 1280px)
   padding: 1rem 2rem;
   z-index: 1000;
 }
+.navigation-top .logga-mobile {
+  display: none;
+}
 .navigation-top .ul-wrapper {
   display: flex;
   list-style: none;
@@ -334,6 +337,33 @@ TABLET (≤ 1280px)
   color: #E578B7;
 }
 
+@media (max-width: 768px) {
+  .navigation-top .logga-desktop {
+    display: none;
+  }
+  .navigation-top .logga-mobile {
+    display: flex;
+    max-width: 2rem;
+  }
+}
+@media (max-width: 425px) {
+  .navigation-top .ul-wrapper {
+    flex-direction: column;
+  }
+  .navigation-top .ul-wrapper .icon {
+    display: flex;
+  }
+  .navigation-top .ul-wrapper li a {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #333;
+    width: 200px;
+    padding: 1rem;
+    gap: 1rem;
+    display: none;
+  }
+}
 main {
   max-width: 1240px;
   margin: 0 auto;

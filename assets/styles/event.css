@@ -79,7 +79,7 @@ TABLET (≤ 1280px)
 /* ===============================
    MOBILE (≤ 375px)
    =============================== */
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   h1 {
     font-size: 44px;
     font-weight: 900;
@@ -179,6 +179,7 @@ body {
   height: auto;
 }
 .container .hero .hero-banner {
+  width: 100%;
   position: absolute;
   z-index: 999;
   left: 50%;

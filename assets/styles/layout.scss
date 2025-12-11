@@ -2,7 +2,7 @@
 @import 'typography.scss';
 @import 'animations.scss';
 
-
+.container{
 .navigation-top {
     position: fixed;
     background-color: $surface-background;
@@ -13,14 +13,22 @@
     align-items: center;
     padding: 1rem 2rem;
     z-index: 1000;
+
+    .logga-mobile{
+        display: none;
+    }
+
     .ul-wrapper{
         display: flex;
         list-style: none; 
         gap: 1.5rem;
+
         .icon{
             display: none;
         }
+
         li{
+
             a{
                 text-decoration: none;
                 color: $text-primary;
@@ -31,7 +39,62 @@
                     
                 }
             }
+        }
     }
+}      
+
+.header-mobile, 
+.overlay-mobile {
+     display: none;
+}
+
+@media (max-width: $breakpoint-tablet){
+    .navigation-top{
+        .logga-desktop{
+            display: none;
+        }
+
+        .logga-mobile{
+            display:flex; 
+            max-width: 2rem;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile){
+    .navigation-top{
+        display: none;
+    }
+
+    .header-mobile {
+        display: flex;   
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: $surface-background;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .overlay-mobile {
+        display: flex;         
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -300px;         
+        width: 300px;
+        height: 100vh;
+        background: $surface-background;
+        padding: 3rem 2rem;
+        gap: 2rem;
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
+
+ 
+    .overlay-mobile.active {
+        right: 0;
     }
 }
 
@@ -40,6 +103,7 @@ main{
     margin: 0 auto; 
 }
 
+}
 
 footer{
     width: 100vw; 

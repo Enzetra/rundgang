@@ -79,7 +79,7 @@ TABLET (≤ 1280px)
 /* ===============================
    MOBILE (≤ 375px)
    =============================== */
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   h1 {
     font-size: 44px;
     font-weight: 900;
@@ -152,7 +152,7 @@ TABLET (≤ 1280px)
   }
 }
 
-.navigation-top {
+.container .navigation-top {
   position: fixed;
   background-color: #EAE6F4;
   color: #7D0E61;
@@ -163,25 +163,72 @@ TABLET (≤ 1280px)
   padding: 1rem 2rem;
   z-index: 1000;
 }
-.navigation-top .ul-wrapper {
+.container .navigation-top .logga-mobile {
+  display: none;
+}
+.container .navigation-top .ul-wrapper {
   display: flex;
   list-style: none;
   gap: 1.5rem;
 }
-.navigation-top .ul-wrapper .icon {
+.container .navigation-top .ul-wrapper .icon {
   display: none;
 }
-.navigation-top .ul-wrapper li a {
+.container .navigation-top .ul-wrapper li a {
   text-decoration: none;
   color: #7D0E61;
   font-weight: 700;
   font-size: 20px;
 }
-.navigation-top .ul-wrapper li a:hover {
+.container .navigation-top .ul-wrapper li a:hover {
   color: #E578B7;
 }
-
-main {
+.container .header-mobile,
+.container .overlay-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .container .navigation-top .logga-desktop {
+    display: none;
+  }
+  .container .navigation-top .logga-mobile {
+    display: flex;
+    max-width: 2rem;
+  }
+}
+@media (max-width: 425px) {
+  .container .navigation-top {
+    display: none;
+  }
+  .container .header-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #EAE6F4;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  .container .overlay-mobile {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: #EAE6F4;
+    padding: 3rem 2rem;
+    gap: 2rem;
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+  .container .overlay-mobile.active {
+    right: 0;
+  }
+}
+.container main {
   max-width: 1240px;
   margin: 0 auto;
 }
