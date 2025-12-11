@@ -99,6 +99,15 @@ body {
     width: 100vw;
     position: relative;
     height: 90vh;
+    .arms-illustration{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 120%;
+        height: auto;
+        z-index: 0;
+    }
     // background-image: url('/assets/img/illustrations/arms.svg');
     // background-position: center;
     // background-size: cover;
@@ -106,13 +115,13 @@ body {
     // overflow: visible;
 
     .main-start-membership-arm-left{
-        // display: none;
+        display: none;
         position: absolute;
         left: -50%;
         top: 20%;
     }
     .main-start-membership-arm-right{
-        // display: none;
+        display: none;
         position: absolute;
         right: -200%;
         bottom: -30%;
@@ -174,9 +183,12 @@ body {
     }
     .main-start-upcoming-events-card-wrapper{
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: flex-start;
+
         gap: 2rem;
+        
 
         .main-start-upcoming-events-card{
             background-color: $surface-primary;

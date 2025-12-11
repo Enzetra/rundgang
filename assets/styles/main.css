@@ -332,6 +332,7 @@ TABLET (≤ 1280px)
   color: #7D0E61;
   font-weight: 700;
   font-size: 20px;
+  cursor: pointer;
 }
 .container .navigation-top .ul-wrapper li a:hover {
   color: #E578B7;
@@ -357,43 +358,53 @@ TABLET (≤ 1280px)
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     background-color: #EAE6F4;
     position: fixed;
     width: 100%;
+    height: auto;
     z-index: 1000;
   }
   .container .header-mobile .logo img {
-    width: 48px;
+    width: 30%;
     height: auto;
   }
   .container .header-mobile .menu-icon svg {
     color: #E578B7;
+    height: 1rem;
   }
   .container .overlay-mobile {
     position: fixed;
-    top: 0;
-    right: -300px; /* hors écran */
+    top: 40px;
+    right: -300px;
     width: 300px;
-    height: 100vh;
-    background: #222;
+    height: auto;
+    background: #EAE6F4;
+    border: 0px 0px 0.5px 0.5px solid #7D0E61;
     display: flex;
     flex-direction: column;
-    padding: 3rem 2rem;
+    padding: 1rem 2rem;
     gap: 2rem;
-    transition: right 0.4s ease; /* animation glissante */
-    z-index: 1000;
+    transition: right 0.4s ease;
+    z-index: 999;
   }
   .container .overlay-mobile a {
-    color: white;
+    padding: 0.5rem 0;
+    color: #7D0E61;
     font-size: 1.4rem;
     text-decoration: none;
+    font-family: "Darker Grotesque";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    cursor: pointer;
   }
   .container .overlay-mobile.active {
     right: 0;
   }
 }
-main {
+.container main {
   margin: 0 auto;
 }
 
@@ -520,12 +531,23 @@ body {
   position: relative;
   height: 90vh;
 }
+.main-start-membership .arms-illustration {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: auto;
+  z-index: 0;
+}
 .main-start-membership .main-start-membership-arm-left {
+  display: none;
   position: absolute;
   left: -50%;
   top: 20%;
 }
 .main-start-membership .main-start-membership-arm-right {
+  display: none;
   position: absolute;
   right: -200%;
   bottom: -30%;
@@ -585,6 +607,7 @@ body {
 }
 .main-start-upcoming-events .main-start-upcoming-events-card-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   gap: 2rem;
