@@ -1,5 +1,8 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Darker+Grotesque:300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Darker+Grotesque:300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Darker+Grotesque:300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Darker+Grotesque:300,regular,500,600,700,800,900);
 * {
   margin: 0;
   padding: 0;
@@ -152,6 +155,1020 @@ TABLET (≤ 1280px)
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===============================
+   FONT IMPORT
+   =============================== */
+/* ===============================
+   CORE COLOR PALETTE
+   =============================== */
+/* ===============================
+   DESIGN TOKENS
+   =============================== */
+/* ===============================
+   TYPOGRAPHY
+   =============================== */
+/* ===============================
+   BREAKPOINT VARIABLES
+   =============================== */
+/* ===============================
+   TYPOGRAPHY STYLES
+   =============================== */
+h1 {
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 1; /* 128px */
+}
+
+h2 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1; /* 52.8px */
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1; /* 31.2px */
+}
+
+h4 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1; /* 62.4px */
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3; /* 26px */
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3; /* 15.6px */
+}
+
+p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25; /* 25px */
+}
+
+/* ===============================
+TABLET (≤ 1280px)
+=============================== */
+/* ===============================
+   TABLET PORTRAIT / IPAD (≤ 768px)
+   =============================== */
+/* ===============================
+   MOBILE (≤ 375px)
+   =============================== */
+@media (max-width: 425px) {
+  h1 {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1;
+  }
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  h4 {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  h5 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  h6 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+}
+/* ===============================
+   UNDERLINE ANIMATION
+   =============================== */
+/* Underline animation utility
+   Use by adding the class `underline-anim` to anchor tags that should animate
+   the underline on hover/focus. */
+.underline-anim {
+  position: relative;
+  display: inline-block; /* allow absolute positioned pseudo element */
+  text-decoration: none; /* we'll create our own underline */
+  padding-bottom: 0.12em; /* give room for underline */
+  /* Reduce motion for users who prefer reduced motion */
+}
+.underline-anim::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.125em; /* thickness of the underline */
+  width: 100%;
+  background-color: currentColor; /* match link color */
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  pointer-events: none; /* don't interfere with clicks */
+}
+.underline-anim:hover::after, .underline-anim:focus::after {
+  transform: scaleX(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .underline-anim::after {
+    transition: none;
+    transform: scaleX(1);
+  }
+}
+
+.container .navigation-top {
+  position: fixed;
+  background-color: #EAE6F4;
+  color: #7D0E61;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+.container .navigation-top .logga-mobile {
+  display: none;
+}
+.container .navigation-top .ul-wrapper {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+.container .navigation-top .ul-wrapper .icon {
+  display: none;
+}
+.container .navigation-top .ul-wrapper li a {
+  text-decoration: none;
+  color: #7D0E61;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+}
+.container .navigation-top .ul-wrapper li a:hover {
+  color: #E578B7;
+}
+.container .header-mobile,
+.container .overlay-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .container .navigation-top .logga-desktop {
+    display: none;
+  }
+  .container .navigation-top .logga-mobile {
+    display: flex;
+    max-width: 2rem;
+  }
+}
+@media (max-width: 425px) {
+  .container .navigation-top {
+    display: none;
+  }
+  .container .header-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: #EAE6F4;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+  }
+  .container .header-mobile .logo img {
+    width: 30%;
+    height: auto;
+  }
+  .container .header-mobile .menu-icon svg {
+    color: #E578B7;
+    height: 1rem;
+  }
+  .container .overlay-mobile {
+    position: fixed;
+    top: 40px;
+    right: -300px;
+    width: 300px;
+    height: auto;
+    background: #EAE6F4;
+    border: solid 0.5px;
+    border-color: #7D0E61;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 2rem;
+    transition: right 0.4s ease;
+    z-index: 999;
+  }
+  .container .overlay-mobile a {
+    padding: 0.5rem 0;
+    color: #7D0E61;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-family: "Darker Grotesque";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    cursor: pointer;
+  }
+  .container .overlay-mobile.active {
+    right: 0;
+  }
+}
+.container main {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+footer {
+  width: 100vw;
+  height: auto;
+  background-size: cover;
+  background-image: url("../img/illustrations/footer.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+footer .information-left {
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  gap: 6rem;
+  padding: 5% 0;
+}
+footer .information-left .info-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+footer .information-left .info-top a {
+  color: #7D0E61;
+  text-decoration: none;
+}
+footer .information-right {
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  gap: 6rem;
+  padding: 5% 1%;
+}
+footer .information-right p {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===============================
+   FONT IMPORT
+   =============================== */
+/* ===============================
+   CORE COLOR PALETTE
+   =============================== */
+/* ===============================
+   DESIGN TOKENS
+   =============================== */
+/* ===============================
+   TYPOGRAPHY
+   =============================== */
+/* ===============================
+   BREAKPOINT VARIABLES
+   =============================== */
+/* ===============================
+   TYPOGRAPHY STYLES
+   =============================== */
+h1 {
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 1; /* 128px */
+}
+
+h2 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1; /* 52.8px */
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1; /* 31.2px */
+}
+
+h4 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1; /* 62.4px */
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3; /* 26px */
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3; /* 15.6px */
+}
+
+p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25; /* 25px */
+}
+
+/* ===============================
+TABLET (≤ 1280px)
+=============================== */
+/* ===============================
+   TABLET PORTRAIT / IPAD (≤ 768px)
+   =============================== */
+/* ===============================
+   MOBILE (≤ 375px)
+   =============================== */
+@media (max-width: 425px) {
+  h1 {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1;
+  }
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  h4 {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  h5 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  h6 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+}
+/* ===============================
+   UNDERLINE ANIMATION
+   =============================== */
+/* Underline animation utility
+   Use by adding the class `underline-anim` to anchor tags that should animate
+   the underline on hover/focus. */
+.underline-anim {
+  position: relative;
+  display: inline-block; /* allow absolute positioned pseudo element */
+  text-decoration: none; /* we'll create our own underline */
+  padding-bottom: 0.12em; /* give room for underline */
+  /* Reduce motion for users who prefer reduced motion */
+}
+.underline-anim::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.125em; /* thickness of the underline */
+  width: 100%;
+  background-color: currentColor; /* match link color */
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  pointer-events: none; /* don't interfere with clicks */
+}
+.underline-anim:hover::after, .underline-anim:focus::after {
+  transform: scaleX(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .underline-anim::after {
+    transition: none;
+    transform: scaleX(1);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===============================
+   FONT IMPORT
+   =============================== */
+/* ===============================
+   CORE COLOR PALETTE
+   =============================== */
+/* ===============================
+   DESIGN TOKENS
+   =============================== */
+/* ===============================
+   TYPOGRAPHY
+   =============================== */
+/* ===============================
+   BREAKPOINT VARIABLES
+   =============================== */
+/* ===============================
+   TYPOGRAPHY STYLES
+   =============================== */
+h1 {
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 1; /* 128px */
+}
+
+h2 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1; /* 52.8px */
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1; /* 31.2px */
+}
+
+h4 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1; /* 62.4px */
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3; /* 26px */
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3; /* 15.6px */
+}
+
+p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25; /* 25px */
+}
+
+/* ===============================
+TABLET (≤ 1280px)
+=============================== */
+/* ===============================
+   TABLET PORTRAIT / IPAD (≤ 768px)
+   =============================== */
+/* ===============================
+   MOBILE (≤ 375px)
+   =============================== */
+@media (max-width: 425px) {
+  h1 {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1;
+  }
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  h4 {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  h5 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  h6 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+}
+/* ===============================
+   UNDERLINE ANIMATION
+   =============================== */
+/* Underline animation utility
+   Use by adding the class `underline-anim` to anchor tags that should animate
+   the underline on hover/focus. */
+.underline-anim {
+  position: relative;
+  display: inline-block; /* allow absolute positioned pseudo element */
+  text-decoration: none; /* we'll create our own underline */
+  padding-bottom: 0.12em; /* give room for underline */
+  /* Reduce motion for users who prefer reduced motion */
+}
+.underline-anim::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.125em; /* thickness of the underline */
+  width: 100%;
+  background-color: currentColor; /* match link color */
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  pointer-events: none; /* don't interfere with clicks */
+}
+.underline-anim:hover::after, .underline-anim:focus::after {
+  transform: scaleX(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .underline-anim::after {
+    transition: none;
+    transform: scaleX(1);
+  }
+}
+
+.container .navigation-top {
+  position: fixed;
+  background-color: #EAE6F4;
+  color: #7D0E61;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+.container .navigation-top .logga-mobile {
+  display: none;
+}
+.container .navigation-top .ul-wrapper {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+.container .navigation-top .ul-wrapper .icon {
+  display: none;
+}
+.container .navigation-top .ul-wrapper li a {
+  text-decoration: none;
+  color: #7D0E61;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+}
+.container .navigation-top .ul-wrapper li a:hover {
+  color: #E578B7;
+}
+.container .header-mobile,
+.container .overlay-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .container .navigation-top .logga-desktop {
+    display: none;
+  }
+  .container .navigation-top .logga-mobile {
+    display: flex;
+    max-width: 2rem;
+  }
+}
+@media (max-width: 425px) {
+  .container .navigation-top {
+    display: none;
+  }
+  .container .header-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: #EAE6F4;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+  }
+  .container .header-mobile .logo img {
+    width: 30%;
+    height: auto;
+  }
+  .container .header-mobile .menu-icon svg {
+    color: #E578B7;
+    height: 1rem;
+  }
+  .container .overlay-mobile {
+    position: fixed;
+    top: 40px;
+    right: -300px;
+    width: 300px;
+    height: auto;
+    background: #EAE6F4;
+    border: solid 0.5px;
+    border-color: #7D0E61;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 2rem;
+    transition: right 0.4s ease;
+    z-index: 999;
+  }
+  .container .overlay-mobile a {
+    padding: 0.5rem 0;
+    color: #7D0E61;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-family: "Darker Grotesque";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    cursor: pointer;
+  }
+  .container .overlay-mobile.active {
+    right: 0;
+  }
+}
+.container main {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+footer {
+  width: 100vw;
+  height: auto;
+  background-size: cover;
+  background-image: url("../img/illustrations/footer.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+footer .information-left {
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  gap: 6rem;
+  padding: 5% 0;
+}
+footer .information-left .info-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+footer .information-left .info-top a {
+  color: #7D0E61;
+  text-decoration: none;
+}
+footer .information-right {
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  gap: 6rem;
+  padding: 5% 1%;
+}
+footer .information-right p {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+body {
+  background-color: #EAE6F4;
+  min-height: 100vh;
+  font-family: "Darker Grotesque", sans-serif;
+  overflow-x: hidden;
+}
+
+.hero-start {
+  position: relative;
+  min-height: 100vh;
+  max-height: 100vh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-start .hero-image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  transition: opacity 0.3s ease-in-out;
+}
+.hero-start h3 {
+  color: #EAE6F4;
+}
+.hero-start h5 {
+  color: #EAE6F4;
+}
+.hero-start .hero-text-wrapper {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-start .hero-text-wrapper .hero-inner-text-wrapper-top {
+  text-align: center;
+}
+.hero-start .hero-text-wrapper .hero-inner-text-wrapper-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.main-start-card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.main-start-card-wrapper .main-start-card {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-start-card-wrapper .main-start-card .main-start-card-text-box {
+  margin: 5rem, 5rem;
+}
+.main-start-card-wrapper .main-start-card .main-start-card-text-box svg {
+  width: 100%;
+  height: auto;
+}
+.main-start-card-wrapper .main-start-card .main-start-card-text-box text {
+  fill: #7D0E61;
+}
+.main-start-card-wrapper .main-start-card .main-start-card-text-box textPath {
+  transition: all 0.3s ease;
+}
+
+.main-start-membership {
+  width: 100vw;
+  position: relative;
+  height: 90vh;
+}
+.main-start-membership .main-start-membership-arm-left {
+  position: absolute;
+  left: -50%;
+  top: 20%;
+}
+.main-start-membership .main-start-membership-arm-right {
+  position: absolute;
+  right: -200%;
+  bottom: -30%;
+}
+.main-start-membership .main-start-membership-text-box {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  color: #7D0E61;
+  max-width: 35vw;
+}
+.main-start-membership .main-start-membership-text-box .read-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  color: #7D0E61;
+  background-color: #E578B7;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  margin-top: 2rem;
+}
+.main-start-membership .main-start-membership-text-box .read-more:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.main-start-upcoming-events .main-start-upcoming-events-text-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-start-upcoming-events .main-start-upcoming-events-text-box h2 {
+  color: #7D0E61;
+}
+.main-start-upcoming-events .main-start-upcoming-events-text-box .see-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  color: #7D0E61;
+  background-color: #EAE6F4;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+}
+.main-start-upcoming-events .main-start-upcoming-events-text-box .see-all:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.main-start-upcoming-events .main-start-upcoming-events-card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.main-start-upcoming-events .main-start-upcoming-events-card-wrapper .main-start-upcoming-events-card {
+  background-color: #C6C3E1;
+  padding: 1.25rem;
+  color: #7D0E61;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.main-start-upcoming-events .main-start-upcoming-events-card-wrapper .main-start-upcoming-events-card .main-start-upcoming-events-card-text-box {
+  min-height: 0;
+}
+.main-start-upcoming-events .main-start-upcoming-events-card-wrapper .main-start-upcoming-events-card p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main-start-upcoming-events .main-start-upcoming-events-card-wrapper .main-start-upcoming-events-card .main-start-upcoming-events-card-text-box-bottom {
+  display: flex;
+  justify-content: left;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+
+.banderoll-wrapper {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  overflow: hidden;
+  background-color: #E578B7;
+}
+
+.banderoll {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.banderoll-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
+  animation: scroll 15s linear infinite;
+}
+
+.text-banderoll h3 {
+  margin: 0;
+}
+
+.svg-banderoll svg {
+  height: 40px;
+  width: 40px;
+  fill: currentColor;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.footer-start {
+  width: 100vw;
+  height: auto;
+  background-size: cover;
+  background-image: url("../img/illustrations/footer.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.footer-start .information-left {
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  gap: 6rem;
+  padding: 5% 0;
+}
+.footer-start .information-left .info-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer-start .information-left .info-top a {
+  color: #7D0E61;
+  text-decoration: none;
+}
+.footer-start .information-right {
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  gap: 6rem;
+  padding: 5% 1%;
+}
+.footer-start .information-right p {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.kommision-card {
+  background-image: url(/assets/img/pictures/kommision-card-picture.png);
+}
+
+.event-card {
+  background-image: url(/assets/img/pictures/event-card-picture.png);
+}
+
+.collab-card {
+  background-image: url(/assets/img/pictures/samarbete-card-pic.png);
+}
+
 body {
   background-color: #EAE6F4;
   min-height: 100vh;
@@ -173,6 +1190,11 @@ body {
 .container .hero {
   position: relative;
 }
+@media (max-width: 425px) {
+  .container .hero {
+    margin-top: 2rem;
+  }
+}
 .container .hero .hero-background {
   background-size: cover;
   width: 100%;
@@ -181,7 +1203,7 @@ body {
 .container .hero .hero-banner {
   width: 100%;
   position: absolute;
-  z-index: 999;
+  z-index: 998;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);

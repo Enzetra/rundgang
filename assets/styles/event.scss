@@ -1,6 +1,8 @@
 @import 'base.scss';
 @import 'typography.scss';
 @import 'animations.scss';
+@import 'layout.scss';
+@import 'main.scss';
 
 body {
     background-color: $surface-background;
@@ -24,6 +26,10 @@ body {
    .hero{
         position: relative;
 
+        @media (max-width: $breakpoint-mobile){
+            margin-top: 2rem;
+        }
+
         .hero-background{
             background-size: cover;
             width: 100%;
@@ -33,11 +39,12 @@ body {
         .hero-banner {
             width: 100%;
             position: absolute;
-            z-index: 999;
+            z-index: 998;
             left: 50%;
             top: 50%;
             transform: translate(-50%,-50%);
-        
+
+
         }
         
    }
