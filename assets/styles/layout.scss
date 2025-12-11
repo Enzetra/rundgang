@@ -53,19 +53,6 @@
 
 @media (max-width: $breakpoint-tablet){
     .navigation-top{
-        .logga-desktop{
-            display: none;
-        }
-
-        .logga-mobile{
-            display:flex; 
-            max-width: 2rem;
-        }
-    }
-}
-
-@media (max-width: $breakpoint-mobile){
-    .navigation-top{
         display: none;
     }
 
@@ -102,7 +89,8 @@
         width: 300px;
         height: auto;
         background: $surface-background;
-        border: 0px 0px 0.5px 0.5px solid $text-primary;
+        border-bottom: 0.5px solid $text-primary;
+        border-left: 0.5px solid $text-primary;
         display: flex;
         flex-direction: column;
         padding: 1rem 2rem ;
@@ -145,12 +133,19 @@ footer{
     justify-content: space-between;
     padding: 1rem;
 
+    @media (max-width: $breakpoint-mobile){
+        flex-direction: column;
+        justify-content: flex-start;
+        background-image: url('../img/illustrations/footer-mobile.svg');
+        gap: 10rem;
+    }
+
     
     .information-left{
         display: flex;
         flex-direction: column;
         align-content: start;
-        gap: 6rem;
+        gap: 5rem;
         padding: 5% 0;
 
         .info-top{
@@ -169,8 +164,24 @@ footer{
         display: flex;
         flex-direction: column;
         align-content: start;
-        gap: 6rem;
+        gap: 5rem;
         padding: 5% 1%;
+
+        .footer-logo{
+            order:0;
+
+            img{
+                width: 439.601px;
+                height: 177.271px;
+
+             @media (max-width: $breakpoint-mobile){
+                order:2;
+                position: center;
+
+            }    
+
+            }
+        }
 
         p{
             font-size: 1.5rem;

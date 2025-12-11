@@ -344,15 +344,6 @@ TABLET (≤ 1280px)
   display: none;
 }
 @media (max-width: 768px) {
-  .container .navigation-top .logga-desktop {
-    display: none;
-  }
-  .container .navigation-top .logga-mobile {
-    display: flex;
-    max-width: 2rem;
-  }
-}
-@media (max-width: 425px) {
   .container .navigation-top {
     display: none;
   }
@@ -382,8 +373,8 @@ TABLET (≤ 1280px)
     width: 300px;
     height: auto;
     background: #EAE6F4;
-    border: solid 0.5px;
-    border-color: #7D0E61;
+    border-bottom: 0.5px solid #7D0E61;
+    border-left: 0.5px solid #7D0E61;
     display: flex;
     flex-direction: column;
     padding: 1rem 2rem;
@@ -408,7 +399,6 @@ TABLET (≤ 1280px)
   }
 }
 .container main {
-  max-width: 1240px;
   margin: 0 auto;
 }
 
@@ -422,11 +412,19 @@ footer {
   justify-content: space-between;
   padding: 1rem;
 }
+@media (max-width: 425px) {
+  footer {
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: url("../img/illustrations/footer-mobile.svg");
+    gap: 10rem;
+  }
+}
 footer .information-left {
   display: flex;
   flex-direction: column;
   align-content: start;
-  gap: 6rem;
+  gap: 5rem;
   padding: 5% 0;
 }
 footer .information-left .info-top {
@@ -442,8 +440,20 @@ footer .information-right {
   display: flex;
   flex-direction: column;
   align-content: start;
-  gap: 6rem;
+  gap: 5rem;
   padding: 5% 1%;
+}
+footer .information-right .footer-logo {
+  order: 0;
+  width: 439.601px;
+  height: 177.271px;
+}
+@media (max-width: 425px) {
+  footer .information-right .footer-logo {
+    order: 2;
+    align-items: center;
+    width: 100%;
+  }
 }
 footer .information-right p {
   font-size: 1.5rem;
@@ -794,15 +804,6 @@ TABLET (≤ 1280px)
   display: none;
 }
 @media (max-width: 768px) {
-  .container .navigation-top .logga-desktop {
-    display: none;
-  }
-  .container .navigation-top .logga-mobile {
-    display: flex;
-    max-width: 2rem;
-  }
-}
-@media (max-width: 425px) {
   .container .navigation-top {
     display: none;
   }
@@ -832,8 +833,8 @@ TABLET (≤ 1280px)
     width: 300px;
     height: auto;
     background: #EAE6F4;
-    border: solid 0.5px;
-    border-color: #7D0E61;
+    border-bottom: 0.5px solid #7D0E61;
+    border-left: 0.5px solid #7D0E61;
     display: flex;
     flex-direction: column;
     padding: 1rem 2rem;
@@ -858,7 +859,6 @@ TABLET (≤ 1280px)
   }
 }
 .container main {
-  max-width: 1240px;
   margin: 0 auto;
 }
 
@@ -872,11 +872,19 @@ footer {
   justify-content: space-between;
   padding: 1rem;
 }
+@media (max-width: 425px) {
+  footer {
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: url("../img/illustrations/footer-mobile.svg");
+    gap: 10rem;
+  }
+}
 footer .information-left {
   display: flex;
   flex-direction: column;
   align-content: start;
-  gap: 6rem;
+  gap: 5rem;
   padding: 5% 0;
 }
 footer .information-left .info-top {
@@ -892,8 +900,20 @@ footer .information-right {
   display: flex;
   flex-direction: column;
   align-content: start;
-  gap: 6rem;
+  gap: 5rem;
   padding: 5% 1%;
+}
+footer .information-right .footer-logo {
+  order: 0;
+  width: 439.601px;
+  height: 177.271px;
+}
+@media (max-width: 425px) {
+  footer .information-right .footer-logo {
+    order: 2;
+    align-items: center;
+    width: 100%;
+  }
 }
 footer .information-right p {
   font-size: 1.5rem;
@@ -950,6 +970,8 @@ body {
 }
 
 .main-start-card-wrapper {
+  max-width: 1240px;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1018,6 +1040,10 @@ body {
   text-decoration: underline;
 }
 
+.main-start-upcoming-events {
+  max-width: 1240px;
+  margin: auto;
+}
 .main-start-upcoming-events .main-start-upcoming-events-text-box {
   display: flex;
   justify-content: space-between;
@@ -1075,13 +1101,15 @@ body {
 }
 
 .banderoll-wrapper {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 100%;
   overflow: hidden;
-  background-color: #E578B7;
+  background-color: #D3E18D;
 }
 
 .banderoll {
@@ -1099,13 +1127,12 @@ body {
 }
 
 .text-banderoll h3 {
+  color: #7D0E61;
   margin: 0;
 }
 
-.svg-banderoll svg {
-  height: 40px;
-  width: 40px;
-  fill: currentColor;
+.img-banderoll img {
+  padding-bottom: 1rem;
 }
 
 @keyframes scroll {
@@ -1189,10 +1216,11 @@ body {
 }
 .container .hero {
   position: relative;
+  margin-top: 4rem;
 }
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .container .hero {
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
 }
 .container .hero .hero-background {

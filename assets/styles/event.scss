@@ -25,9 +25,10 @@ body {
 
    .hero{
         position: relative;
+        margin-top: 4rem;
 
-        @media (max-width: $breakpoint-mobile){
-            margin-top: 2rem;
+        @media (max-width: $breakpoint-tablet){
+            margin-top: 4rem;
         }
 
         .hero-background{
