@@ -1443,6 +1443,8 @@ body {
 .upcoming-events-card-image-wrapper {
   position: relative;
   width: 100%;
+  max-height: 300px;
+  overflow: hidden;
 }
 .upcoming-events-card-image-wrapper .events-card-image-box {
   width: 100%;

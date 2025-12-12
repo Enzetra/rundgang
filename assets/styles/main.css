@@ -567,6 +567,7 @@ footer .information-right .footer-logo img {
     order: 2;
     position: center;
     width: 100%;
+    min-width: 19rem;
   }
 }
 footer .information-right p {
@@ -575,6 +576,7 @@ footer .information-right p {
   font-weight: 900;
   line-height: normal;
   text-transform: uppercase;
+  color: #7D0E61;
 }
 
 body {
@@ -692,7 +694,6 @@ body {
    ----------------------------- */
 .main-start-card {
   flex: 1 1 calc(33.333% - 2rem);
-  /* Card size and look */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -700,7 +701,19 @@ body {
   justify-content: center;
   align-items: center;
   height: 50vh;
+  position: relative;
+  overflow: hidden;
   /* Ensure SVG fills width */
+}
+.main-start-card .hover-illustration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
 }
 .main-start-card .main-start-card-text-box {
   width: 100%;
@@ -716,10 +729,17 @@ body {
 /* -----------------------------------------
    TABLET (<=1024px) — Two cards per row
    ----------------------------------------- */
+@media (min-width: 1025px) {
+  .main-start-card:hover .hover-illustration {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
 @media (max-width: 1024px) {
   .main-start-card {
     flex: 1 1 calc(50% - 2rem);
     height: 80vh;
+    max-height: 500px;
   }
 }
 /* -----------------------------------------
@@ -727,8 +747,9 @@ body {
    ----------------------------------------- */
 @media (max-width: 768px) {
   .main-start-card {
-    flex: 0 1 100%;
-    height: 90vh;
+    flex: 0 0 100%;
+    height: 70vh;
+    max-height: 500px;
   }
   .main-start-card .main-start-card-text-box svg {
     width: 100%;
@@ -740,6 +761,7 @@ body {
 @media (max-width: 480px) {
   .main-start-card {
     height: 320px;
+    width: 80%;
   }
 }
 .main-start-membership {
@@ -861,6 +883,8 @@ body {
 .upcoming-events-card-image-wrapper {
   position: relative;
   width: 100%;
+  max-height: 300px;
+  overflow: hidden;
 }
 .upcoming-events-card-image-wrapper .events-card-image-box {
   width: 100%;
@@ -930,6 +954,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   padding: 0.75rem 1.25rem;
+  /* MOBILE VERSION (≤ 768px) */
 }
 .main-start-upcoming-events-text-box .see-all:hover {
   cursor: pointer;
@@ -962,6 +987,7 @@ body {
   color: #7D0E61;
   border: none;
   font-weight: 700;
+  padding: 0.5rem;
   cursor: pointer;
 }
 .upcoming-events-card-button:hover {

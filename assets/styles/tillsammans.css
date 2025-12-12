@@ -1,0 +1,580 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Darker+Grotesque:300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Darker+Grotesque:300,regular,500,600,700,800,900);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===============================
+   FONT IMPORT
+   =============================== */
+/* =========================================
+   CUSTOM CURSOR (DEFAULT + HOVER)
+   ========================================= */
+html, body {
+  cursor: url("/assets/img/illustrations/cursor.svg") 4 4, auto;
+}
+
+/* Hover state for all interactive elements */
+a:hover,
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+.custom-hover-area:hover {
+  cursor: url("/assets/img/illustrations/cursor-hover.svg") 4 4, pointer;
+}
+
+/* ===============================
+   CORE COLOR PALETTE
+   =============================== */
+/* ===============================
+   DESIGN TOKENS
+   =============================== */
+/* ===============================
+   TYPOGRAPHY
+   =============================== */
+/* ===============================
+   BREAKPOINT VARIABLES
+   =============================== */
+/* =========================================
+   BASE (MOBILE FIRST)
+   ========================================= */
+h1 {
+  font-size: 35px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+h6 {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+/* =========================================
+   TABLET (≥ 768px)
+   ========================================= */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1; /* same as desktop */
+  }
+  h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  h3 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  h4 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  h5 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  h6 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+}
+/* =========================================
+   DESKTOP (≥ 1024px)
+   ========================================= */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 1;
+  }
+  h2 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  h3 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  h4 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  h6 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+}
+/* ===============================
+   UNDERLINE ANIMATION
+   =============================== */
+/* Underline animation utility
+   Use by adding the class `underline-anim` to anchor tags that should animate
+   the underline on hover/focus. */
+.underline-anim {
+  position: relative;
+  display: inline-block; /* allow absolute positioned pseudo element */
+  text-decoration: none; /* we'll create our own underline */
+  padding-bottom: 0.12em; /* give room for underline */
+  /* Reduce motion for users who prefer reduced motion */
+}
+.underline-anim::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.125em; /* thickness of the underline */
+  width: 100%;
+  background-color: currentColor; /* match link color */
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  pointer-events: none; /* don't interfere with clicks */
+}
+.underline-anim:hover::after, .underline-anim:focus::after {
+  transform: scaleX(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .underline-anim::after {
+    transition: none;
+    transform: scaleX(1);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===============================
+   FONT IMPORT
+   =============================== */
+/* =========================================
+   CUSTOM CURSOR (DEFAULT + HOVER)
+   ========================================= */
+html, body {
+  cursor: url("/assets/img/illustrations/cursor.svg") 4 4, auto;
+}
+
+/* Hover state for all interactive elements */
+a:hover,
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+.custom-hover-area:hover {
+  cursor: url("/assets/img/illustrations/cursor-hover.svg") 4 4, pointer;
+}
+
+/* ===============================
+   CORE COLOR PALETTE
+   =============================== */
+/* ===============================
+   DESIGN TOKENS
+   =============================== */
+/* ===============================
+   TYPOGRAPHY
+   =============================== */
+/* ===============================
+   BREAKPOINT VARIABLES
+   =============================== */
+/* =========================================
+   BASE (MOBILE FIRST)
+   ========================================= */
+h1 {
+  font-size: 35px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+h6 {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+/* =========================================
+   TABLET (≥ 768px)
+   ========================================= */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1; /* same as desktop */
+  }
+  h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  h3 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  h4 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  h5 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  h6 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+}
+/* =========================================
+   DESKTOP (≥ 1024px)
+   ========================================= */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 1;
+  }
+  h2 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  h3 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  h4 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  h6 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+}
+/* ===============================
+   UNDERLINE ANIMATION
+   =============================== */
+/* Underline animation utility
+   Use by adding the class `underline-anim` to anchor tags that should animate
+   the underline on hover/focus. */
+.underline-anim {
+  position: relative;
+  display: inline-block; /* allow absolute positioned pseudo element */
+  text-decoration: none; /* we'll create our own underline */
+  padding-bottom: 0.12em; /* give room for underline */
+  /* Reduce motion for users who prefer reduced motion */
+}
+.underline-anim::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.125em; /* thickness of the underline */
+  width: 100%;
+  background-color: currentColor; /* match link color */
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  pointer-events: none; /* don't interfere with clicks */
+}
+.underline-anim:hover::after, .underline-anim:focus::after {
+  transform: scaleX(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .underline-anim::after {
+    transition: none;
+    transform: scaleX(1);
+  }
+}
+
+.container .navigation-top {
+  position: fixed;
+  background-color: #EAE6F4;
+  color: #7D0E61;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+.container .navigation-top .logga-mobile {
+  display: none;
+}
+.container .navigation-top .ul-wrapper {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+.container .navigation-top .ul-wrapper .icon {
+  display: none;
+}
+.container .navigation-top .ul-wrapper li a {
+  text-decoration: none;
+  color: #7D0E61;
+  font-weight: 700;
+  font-size: 20px;
+}
+.container .navigation-top .ul-wrapper li a:hover {
+  color: #E578B7;
+}
+.container .header-mobile,
+.container .overlay-mobile {
+  display: none;
+}
+@media (max-width: 920px) {
+  .container .navigation-top {
+    display: none;
+  }
+  .container .header-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: #EAE6F4;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+  }
+  .container .header-mobile .logo img {
+    width: 30%;
+    height: auto;
+  }
+  .container .header-mobile .menu-icon svg {
+    color: #E578B7;
+    height: 1rem;
+  }
+  .container .overlay-mobile {
+    position: fixed;
+    top: 40px;
+    right: -300px;
+    width: 300px;
+    height: auto;
+    background: #EAE6F4;
+    border-bottom: 0.5px solid #7D0E61;
+    border-left: 0.5px solid #7D0E61;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 2rem;
+    transition: right 0.4s ease;
+    z-index: 999;
+  }
+  .container .overlay-mobile a {
+    padding: 0.5rem 0;
+    color: #7D0E61;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-family: "Darker Grotesque";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    cursor: pointer;
+  }
+  .container .overlay-mobile.active {
+    right: 0;
+  }
+}
+.container main {
+  margin: 0 auto;
+}
+
+footer {
+  width: 100vw;
+  height: auto;
+  background-size: cover;
+  background-image: url("../img/illustrations/footer.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  padding-right: 3rem;
+}
+@media (max-width: 531px) {
+  footer {
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: url("../img/illustrations/footer-mobile.svg");
+    gap: 10rem;
+  }
+}
+footer .information-left {
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  gap: 5rem;
+  padding: 5% 0;
+}
+@media (max-width: 531px) {
+  footer .information-left {
+    gap: 1rem;
+  }
+}
+footer .information-left .info-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+footer .information-left .info-top a {
+  color: #7D0E61;
+  text-decoration: none;
+}
+footer .information-right {
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  gap: 5rem;
+  padding: 5% 1%;
+}
+@media (max-width: 531px) {
+  footer .information-right {
+    gap: 1rem;
+    padding: 5% 0;
+  }
+}
+footer .information-right .footer-logo {
+  width: 100%;
+  display: flex;
+}
+footer .information-right .footer-logo img {
+  max-width: 25rem;
+  min-width: 20rem;
+  height: auto;
+}
+@media (max-width: 531px) {
+  footer .information-right .footer-logo img {
+    order: 2;
+    position: center;
+    width: 100%;
+    min-width: 19rem;
+  }
+}
+footer .information-right p {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #7D0E61;
+}/*# sourceMappingURL=tillsammans.css.map */
