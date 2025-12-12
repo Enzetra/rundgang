@@ -190,6 +190,7 @@ footer{
                 order:2;
                 position: center;
                 width: 100%;
+                min-width: 19rem;
             }    
 
             }
@@ -201,6 +202,7 @@ footer{
             font-weight: 900;
             line-height: normal;
             text-transform: uppercase;
+            color: $text-primary;
         }
     }
 

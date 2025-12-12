@@ -66,24 +66,24 @@ body {
 
             .card-events{
                 display: flex;
+                justify-content: start;
                 gap: 1rem;
                 background-color: $surface-primary;
                 padding:2.5rem ;
                 width: 100%;
-
 
                 img{
                     width: 30%;
                     align-self: strech;
                 
                 }
-
                 
                 .card-text{
                     display: flex;
                     flex-direction: column;
-                    align-content: flex-start;
+                    align-content: stretch;
                     gap: 0.5rem;
+                    width: 100%;
 
                     .card-text-top{
                         display: flex;
@@ -122,6 +122,9 @@ body {
                             .buttons-yellow{
                                 background-color: $linne;
                             }
+                        }
+                        .opacite-null{
+                            opacity: 0%;
                         }
 
                     }

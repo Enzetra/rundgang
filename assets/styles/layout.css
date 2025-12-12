@@ -296,7 +296,7 @@ footer {
   padding: 1rem;
   padding-right: 3rem;
 }
-@media (max-width: 425px) {
+@media (max-width: 531px) {
   footer {
     flex-direction: column;
     justify-content: flex-start;
@@ -311,7 +311,7 @@ footer .information-left {
   gap: 5rem;
   padding: 5% 0;
 }
-@media (max-width: 425px) {
+@media (max-width: 531px) {
   footer .information-left {
     gap: 1rem;
   }
@@ -333,7 +333,7 @@ footer .information-right {
   gap: 5rem;
   padding: 5% 1%;
 }
-@media (max-width: 425px) {
+@media (max-width: 531px) {
   footer .information-right {
     gap: 1rem;
     padding: 5% 0;
@@ -348,11 +348,12 @@ footer .information-right .footer-logo img {
   min-width: 20rem;
   height: auto;
 }
-@media (max-width: 425px) {
+@media (max-width: 531px) {
   footer .information-right .footer-logo img {
     order: 2;
     position: center;
     width: 100%;
+    min-width: 19rem;
   }
 }
 footer .information-right p {
@@ -361,4 +362,5 @@ footer .information-right p {
   font-weight: 900;
   line-height: normal;
   text-transform: uppercase;
+  color: #7D0E61;
 }/*# sourceMappingURL=layout.css.map */
