@@ -132,6 +132,7 @@ footer{
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+    padding-right: 3rem;
 
     @media (max-width: $breakpoint-mobile){
         flex-direction: column;
@@ -148,6 +149,10 @@ footer{
         gap: 5rem;
         padding: 5% 0;
 
+        @media (max-width: $breakpoint-mobile){
+            gap:1rem;
+        } 
+
         .info-top{
             display: flex;
             flex-direction: column;
@@ -161,23 +166,28 @@ footer{
     }
 
     .information-right{
+        max-width: 26rem;
         display: flex;
         flex-direction: column;
-        align-content: start;
+        align-content: flex-end;
         gap: 5rem;
         padding: 5% 1%;
+
+        @media (max-width: $breakpoint-mobile){
+            gap:1rem;
+        } 
 
         .footer-logo{
             order:0;
 
             img{
-                width: 439.601px;
-                height: 177.271px;
+                width: 25rem;
+                height: auto;
 
              @media (max-width: $breakpoint-mobile){
                 order:2;
                 position: center;
-
+                width: 100%;
             }    
 
             }
