@@ -45,7 +45,6 @@ body {
             top: 50%;
             transform: translate(-50%,-50%);
 
-
         }
         
    }
@@ -72,11 +71,37 @@ body {
                 padding:2.5rem ;
                 width: 100%;
 
-                img{
-                    width: 30%;
-                    align-self: strech;
-                
+                @media (max-width: $breakpoint-tablet){
+                    flex-direction: column;
                 }
+
+                .card-image{
+                    width: 30%;
+                    @media (max-width: $breakpoint-tablet){
+                        min-width: 100%; 
+                        position: relative;
+                       
+                    }
+                    img{
+                        width: 100%;
+                        align-self: strech; 
+                        @media (max-width: $breakpoint-tablet){
+                            position: relative
+                        };
+                    }
+                    .mobile{
+                        display: none;
+                        @media (max-width: $breakpoint-tablet){
+                            display:flex; 
+                            gap: 1rem;
+                            z-index: 9999;
+                            position: absolute;
+                            bottom: 2rem;
+                            left: 1rem;
+                        
+                        }
+                    }
+                }  
                 
                 .card-text{
                     display: flex;
@@ -90,7 +115,6 @@ body {
                         flex-direction: column;
                         align-content:flex-start;
                         gap: 0.5rem;
-
                     }
 
                     .card-text-bottom{
@@ -104,24 +128,46 @@ body {
                             flex-direction: column;
                             align-content: flex-start;
                             gap: 1.5rem;
+
+                            @media (max-width: $breakpoint-tablet){
+                                p{
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;
+                                 overflow: hidden;
+                                text-overflow: ellipsis;
+                                }
+
+                                .läsmer{
+                                    text-align: center;
+                                }
+
+                                .desktop{
+                                    display: none;
+                                }
+                        }
                         }
 
                         .card-buttons{
                             display: flex;
                             flex-direction: column;
                             gap: 0.5rem;
+                            @media (max-width: $breakpoint-tablet){
+                                display: none;
+                        }
 
                             button{
                                 border: none;
                                 padding: 0.5rem;
                                 color: $text-primary;
+
+                                @media (max-width: $breakpoint-tablet){
+                               position: absolute;
+
+                               }
+
                             }
-                            .buttons-pink{
-                                background-color: $silke-light;
-                            }
-                            .buttons-yellow{
-                                background-color: $linne;
-                            }
+
                         }
                         .opacite-null{
                             opacity: 0%;
@@ -135,6 +181,20 @@ body {
                 
         }
     }
+
+    .buttons-pink{
+        background-color: $silke-light;
+        border: none;
+        padding: 0.5rem;
+        color: $text-primary;
+    }
+    .buttons-yellow{
+        background-color: $linne;
+        border: none;
+        padding: 0.5rem;
+        color: $text-primary;
+    }
+
    .little-message{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -185,5 +245,3 @@ body {
         
    }
 }
-
-   

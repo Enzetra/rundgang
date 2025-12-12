@@ -1676,9 +1676,41 @@ body {
   padding: 2.5rem;
   width: 100%;
 }
-.container .kommande-events .cards-events .card-events img {
+@media (max-width: 920px) {
+  .container .kommande-events .cards-events .card-events {
+    flex-direction: column;
+  }
+}
+.container .kommande-events .cards-events .card-events .card-image {
   width: 30%;
+}
+@media (max-width: 920px) {
+  .container .kommande-events .cards-events .card-events .card-image {
+    min-width: 100%;
+    position: relative;
+  }
+}
+.container .kommande-events .cards-events .card-events .card-image img {
+  width: 100%;
   align-self: strech;
+}
+@media (max-width: 920px) {
+  .container .kommande-events .cards-events .card-events .card-image img {
+    position: relative;
+  }
+}
+.container .kommande-events .cards-events .card-events .card-image .mobile {
+  display: none;
+}
+@media (max-width: 920px) {
+  .container .kommande-events .cards-events .card-events .card-image .mobile {
+    display: flex;
+    gap: 1rem;
+    z-index: 9999;
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+  }
 }
 .container .kommande-events .cards-events .card-events .card-text {
   display: flex;
@@ -1705,24 +1737,55 @@ body {
   align-content: flex-start;
   gap: 1.5rem;
 }
+@media (max-width: 920px) {
+  .container .kommande-events .cards-events .card-events .card-text .card-text-bottom .card-info p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .container .kommande-events .cards-events .card-events .card-text .card-text-bottom .card-info .läsmer {
+    text-align: center;
+  }
+  .container .kommande-events .cards-events .card-events .card-text .card-text-bottom .card-info .desktop {
+    display: none;
+  }
+}
 .container .kommande-events .cards-events .card-events .card-text .card-text-bottom .card-buttons {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+@media (max-width: 920px) {
+  .container .kommande-events .cards-events .card-events .card-text .card-text-bottom .card-buttons {
+    display: none;
+  }
 }
 .container .kommande-events .cards-events .card-events .card-text .card-text-bottom .card-buttons button {
   border: none;
   padding: 0.5rem;
   color: #7D0E61;
 }
-.container .kommande-events .cards-events .card-events .card-text .card-text-bottom .card-buttons .buttons-pink {
-  background-color: #ED91C2;
-}
-.container .kommande-events .cards-events .card-events .card-text .card-text-bottom .card-buttons .buttons-yellow {
-  background-color: #D3E18D;
+@media (max-width: 920px) {
+  .container .kommande-events .cards-events .card-events .card-text .card-text-bottom .card-buttons button {
+    position: absolute;
+  }
 }
 .container .kommande-events .cards-events .card-events .card-text .card-text-bottom .opacite-null {
   opacity: 0%;
+}
+.container .buttons-pink {
+  background-color: #ED91C2;
+  border: none;
+  padding: 0.5rem;
+  color: #7D0E61;
+}
+.container .buttons-yellow {
+  background-color: #D3E18D;
+  border: none;
+  padding: 0.5rem;
+  color: #7D0E61;
 }
 .container .little-message {
   display: grid;
