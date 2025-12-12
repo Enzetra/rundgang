@@ -13,6 +13,10 @@ html {
 /* ===============================
    FONT IMPORT
    =============================== */
+html, body {
+  cursor: url("/assets/img/illustrations/cursor.svg") 12 12, auto;
+}
+
 /* ===============================
    CORE COLOR PALETTE
    =============================== */

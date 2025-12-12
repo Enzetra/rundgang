@@ -13,6 +13,9 @@ html {
 
 @import url(https://fonts.googleapis.com/css?family=Darker+Grotesque:300,regular,500,600,700,800,900);
 
+html, body {
+  cursor: url('/assets/img/illustrations/cursor.svg') 12 12, auto;
+}
 
 /* ===============================
    CORE COLOR PALETTE

@@ -16,6 +16,10 @@ html {
 /* ===============================
    FONT IMPORT
    =============================== */
+html, body {
+  cursor: url("/assets/img/illustrations/cursor.svg") 12 12, auto;
+}
+
 /* ===============================
    CORE COLOR PALETTE
    =============================== */
@@ -202,6 +206,10 @@ html {
 /* ===============================
    FONT IMPORT
    =============================== */
+html, body {
+  cursor: url("/assets/img/illustrations/cursor.svg") 12 12, auto;
+}
+
 /* ===============================
    CORE COLOR PALETTE
    =============================== */
@@ -558,6 +566,10 @@ html {
 /* ===============================
    FONT IMPORT
    =============================== */
+html, body {
+  cursor: url("/assets/img/illustrations/cursor.svg") 12 12, auto;
+}
+
 /* ===============================
    CORE COLOR PALETTE
    =============================== */
@@ -744,6 +756,10 @@ html {
 /* ===============================
    FONT IMPORT
    =============================== */
+html, body {
+  cursor: url("/assets/img/illustrations/cursor.svg") 12 12, auto;
+}
+
 /* ===============================
    CORE COLOR PALETTE
    =============================== */
@@ -1358,6 +1374,11 @@ body {
   gap: 1.25rem;
   background-color: #C6C3E1;
   padding: 1.5rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.main-start-upcoming-events-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 2px 2px 0px #E578B7;
 }
 
 /* --------------------------------
