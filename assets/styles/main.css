@@ -485,6 +485,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+  padding-right: 3rem;
 }
 @media (max-width: 425px) {
   footer {
@@ -516,29 +517,33 @@ footer .information-left .info-top a {
   text-decoration: none;
 }
 footer .information-right {
-  max-width: 26.875rem;
+  max-width: 30rem;
   display: flex;
   flex-direction: column;
-  align-content: flex-end;
+  align-content: flex-start;
   gap: 5rem;
   padding: 5% 1%;
 }
 @media (max-width: 425px) {
   footer .information-right {
     gap: 1rem;
+    padding: 5% 0;
   }
 }
 footer .information-right .footer-logo {
-  order: 0;
+  width: 100%;
+  display: flex;
 }
 footer .information-right .footer-logo img {
-  width: 439.601px;
-  height: 177.271px;
+  max-width: 25rem;
+  min-width: 20rem;
+  height: auto;
 }
 @media (max-width: 425px) {
   footer .information-right .footer-logo img {
     order: 2;
     position: center;
+    width: 100%;
   }
 }
 footer .information-right p {

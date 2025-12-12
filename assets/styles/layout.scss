@@ -174,14 +174,16 @@ footer{
 
         @media (max-width: $breakpoint-mobile){
             gap:1rem;
+            padding: 5% 0;
         } 
 
         .footer-logo{
             width: 100%;
-            order:0;
+            display: flex;
 
             img{
-                width: 25rem;
+                max-width: 25rem;
+                min-width: 20rem;
                 height: auto;
 
              @media (max-width: $breakpoint-mobile){

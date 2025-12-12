@@ -529,20 +529,23 @@ footer .information-right {
 @media (max-width: 425px) {
   footer .information-right {
     gap: 1rem;
+    padding: 5% 0;
   }
 }
 footer .information-right .footer-logo {
   width: 100%;
-  order: 0;
+  display: flex;
 }
 footer .information-right .footer-logo img {
-  width: 439.601px;
-  height: 177.271px;
+  max-width: 25rem;
+  min-width: 20rem;
+  height: auto;
 }
 @media (max-width: 425px) {
   footer .information-right .footer-logo img {
     order: 2;
     position: center;
+    width: 100%;
   }
 }
 footer .information-right p {
@@ -1079,20 +1082,23 @@ footer .information-right {
 @media (max-width: 425px) {
   footer .information-right {
     gap: 1rem;
+    padding: 5% 0;
   }
 }
 footer .information-right .footer-logo {
   width: 100%;
-  order: 0;
+  display: flex;
 }
 footer .information-right .footer-logo img {
-  width: 26.875rem;
+  max-width: 25rem;
+  min-width: 20rem;
   height: auto;
 }
 @media (max-width: 425px) {
   footer .information-right .footer-logo img {
     order: 2;
     position: center;
+    width: 100%;
   }
 }
 footer .information-right p {
@@ -1663,10 +1669,11 @@ body {
   gap: 1rem;
   background-color: #C6C3E1;
   padding: 2.5rem;
-}
-.container .kommande-events .cards-events .card-events .card-picture img {
   width: 100%;
-  height: auto;
+}
+.container .kommande-events .cards-events .card-events img {
+  width: 30%;
+  align-self: strech;
 }
 .container .kommande-events .cards-events .card-events .card-text {
   display: flex;
@@ -1681,10 +1688,12 @@ body {
   gap: 0.5rem;
 }
 .container .kommande-events .cards-events .card-events .card-text .card-text-bottom {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 .container .kommande-events .cards-events .card-events .card-text .card-text-bottom .card-info {
+  max-width: 474px;
   display: flex;
   flex-direction: column;
   align-content: flex-start;
@@ -1697,6 +1706,8 @@ body {
 }
 .container .kommande-events .cards-events .card-events .card-text .card-text-bottom .card-buttons button {
   border: none;
+  padding: 0.5rem;
+  color: #7D0E61;
 }
 .container .kommande-events .cards-events .card-events .card-text .card-text-bottom .card-buttons .buttons-pink {
   background-color: #ED91C2;

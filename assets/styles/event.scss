@@ -69,14 +69,16 @@ body {
                 gap: 1rem;
                 background-color: $surface-primary;
                 padding:2.5rem ;
+                width: 100%;
 
-                .card-picture{
-                    img{
-                        width: 100%;
-                        height: auto;
-                    }
 
+                img{
+                    width: 30%;
+                    align-self: strech;
+                
                 }
+
+                
                 .card-text{
                     display: flex;
                     flex-direction: column;
@@ -92,10 +94,12 @@ body {
                     }
 
                     .card-text-bottom{
+                        width: 100%;
                         display: flex;
                         justify-content: space-between;
 
                         .card-info{
+                            max-width: 474px;
                             display: flex;
                             flex-direction: column;
                             align-content: flex-start;
@@ -109,6 +113,8 @@ body {
 
                             button{
                                 border: none;
+                                padding: 0.5rem;
+                                color: $text-primary;
                             }
                             .buttons-pink{
                                 background-color: $silke-light;
