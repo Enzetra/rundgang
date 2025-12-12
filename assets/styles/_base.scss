@@ -13,8 +13,21 @@ html {
 
 @import url(https://fonts.googleapis.com/css?family=Darker+Grotesque:300,regular,500,600,700,800,900);
 
+/* =========================================
+   CUSTOM CURSOR (DEFAULT + HOVER)
+   ========================================= */
+
 html, body {
-  cursor: url('/assets/img/illustrations/cursor.svg') 12 12, auto;
+  cursor: url('/assets/img/illustrations/cursor.svg') 4 4, auto;
+}
+
+/* Hover state for all interactive elements */
+a:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.custom-hover-area:hover {
+  cursor: url('/assets/img/illustrations/cursor-hover.svg') 4 4, pointer;
 }
 
 /* ===============================

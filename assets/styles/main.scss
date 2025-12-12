@@ -413,7 +413,7 @@ body {
         }
         }
     }
-.upcoming-events-card-textbox {
+    .upcoming-events-card-textbox {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -426,7 +426,7 @@ body {
         overflow: hidden;
         text-overflow: ellipsis;
     }
-}
+    }
 
 /* --------------------------------
    BUTTON

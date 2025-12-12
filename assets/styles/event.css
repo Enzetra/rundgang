@@ -16,8 +16,20 @@ html {
 /* ===============================
    FONT IMPORT
    =============================== */
+/* =========================================
+   CUSTOM CURSOR (DEFAULT + HOVER)
+   ========================================= */
 html, body {
-  cursor: url("/assets/img/illustrations/cursor.svg") 12 12, auto;
+  cursor: url("/assets/img/illustrations/cursor.svg") 4 4, auto;
+}
+
+/* Hover state for all interactive elements */
+a:hover,
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+.custom-hover-area:hover {
+  cursor: url("/assets/img/illustrations/cursor-hover.svg") 4 4, pointer;
 }
 
 /* ===============================
@@ -206,8 +218,20 @@ html {
 /* ===============================
    FONT IMPORT
    =============================== */
+/* =========================================
+   CUSTOM CURSOR (DEFAULT + HOVER)
+   ========================================= */
 html, body {
-  cursor: url("/assets/img/illustrations/cursor.svg") 12 12, auto;
+  cursor: url("/assets/img/illustrations/cursor.svg") 4 4, auto;
+}
+
+/* Hover state for all interactive elements */
+a:hover,
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+.custom-hover-area:hover {
+  cursor: url("/assets/img/illustrations/cursor-hover.svg") 4 4, pointer;
 }
 
 /* ===============================
@@ -410,7 +434,6 @@ p {
   color: #7D0E61;
   font-weight: 700;
   font-size: 20px;
-  cursor: pointer;
 }
 .container .navigation-top .ul-wrapper li a:hover {
   color: #E578B7;
@@ -571,8 +594,20 @@ html {
 /* ===============================
    FONT IMPORT
    =============================== */
+/* =========================================
+   CUSTOM CURSOR (DEFAULT + HOVER)
+   ========================================= */
 html, body {
-  cursor: url("/assets/img/illustrations/cursor.svg") 12 12, auto;
+  cursor: url("/assets/img/illustrations/cursor.svg") 4 4, auto;
+}
+
+/* Hover state for all interactive elements */
+a:hover,
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+.custom-hover-area:hover {
+  cursor: url("/assets/img/illustrations/cursor-hover.svg") 4 4, pointer;
 }
 
 /* ===============================
@@ -761,8 +796,20 @@ html {
 /* ===============================
    FONT IMPORT
    =============================== */
+/* =========================================
+   CUSTOM CURSOR (DEFAULT + HOVER)
+   ========================================= */
 html, body {
-  cursor: url("/assets/img/illustrations/cursor.svg") 12 12, auto;
+  cursor: url("/assets/img/illustrations/cursor.svg") 4 4, auto;
+}
+
+/* Hover state for all interactive elements */
+a:hover,
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+.custom-hover-area:hover {
+  cursor: url("/assets/img/illustrations/cursor-hover.svg") 4 4, pointer;
 }
 
 /* ===============================
@@ -965,7 +1012,6 @@ p {
   color: #7D0E61;
   font-weight: 700;
   font-size: 20px;
-  cursor: pointer;
 }
 .container .navigation-top .ul-wrapper li a:hover {
   color: #E578B7;
