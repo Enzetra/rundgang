@@ -141,7 +141,6 @@ footer{
         gap: 10rem;
     }
 
-    
     .information-left{
         display: flex;
         flex-direction: column;
@@ -166,10 +165,10 @@ footer{
     }
 
     .information-right{
-        max-width: 26rem;
+        max-width: 30rem;
         display: flex;
         flex-direction: column;
-        align-content: flex-end;
+        align-content: flex-start;
         gap: 5rem;
         padding: 5% 1%;
 
@@ -178,6 +177,7 @@ footer{
         } 
 
         .footer-logo{
+            width: 100%;
             order:0;
 
             img{

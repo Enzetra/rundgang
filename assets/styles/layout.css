@@ -322,10 +322,10 @@ footer .information-left .info-top a {
   text-decoration: none;
 }
 footer .information-right {
-  max-width: 26rem;
+  max-width: 30rem;
   display: flex;
   flex-direction: column;
-  align-content: flex-end;
+  align-content: flex-start;
   gap: 5rem;
   padding: 5% 1%;
 }
@@ -335,6 +335,7 @@ footer .information-right {
   }
 }
 footer .information-right .footer-logo {
+  width: 100%;
   order: 0;
 }
 footer .information-right .footer-logo img {
