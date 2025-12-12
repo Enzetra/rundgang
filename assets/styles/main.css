@@ -61,8 +61,8 @@ h5 {
 
 h6 {
   font-size: 14px;
-  font-weight: 500;
-  line-height: 1.3; /* 15.6px */
+  font-weight: 700;
+  line-height: 1.1; /* 15.6px */
 }
 
 p {
@@ -213,8 +213,8 @@ h5 {
 
 h6 {
   font-size: 14px;
-  font-weight: 500;
-  line-height: 1.3; /* 15.6px */
+  font-weight: 700;
+  line-height: 1.1; /* 15.6px */
 }
 
 p {
@@ -715,18 +715,91 @@ body {
 }
 
 .main-start-upcoming-events {
-  max-width: 1240px;
-  margin: auto;
+  max-width: 1244px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
-.main-start-upcoming-events .main-start-upcoming-events-text-box {
+
+/* --------------------------------
+   CARD — Desktop: 1/3 width
+   -------------------------------- */
+.main-start-upcoming-events-card {
+  flex: 1 1 calc(33.333% - 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background-color: #C6C3E1;
+  padding: 1.5rem;
+}
+
+/* --------------------------------
+   IMAGE WRAPPER
+   -------------------------------- */
+.upcoming-events-card-image-wrapper {
+  position: relative;
+  width: 100%;
+}
+.upcoming-events-card-image-wrapper .events-card-image-box {
+  width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.upcoming-events-card-image-wrapper .image-tags-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  bottom: 0.25rem;
+  left: 0.25rem;
+}
+.upcoming-events-card-image-wrapper .image-tags-wrapper .image-tag-1 {
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: #E578B7;
+  padding: 0.35rem 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.upcoming-events-card-image-wrapper .image-tags-wrapper .image-tag-1 h6 {
+  color: #7D0E61;
+}
+.upcoming-events-card-image-wrapper .image-tags-wrapper .image-tag-2 {
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: #D3E18D;
+  padding: 0.35rem 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.upcoming-events-card-image-wrapper .image-tags-wrapper .image-tag-2 h6 {
+  color: #7D0E61;
+}
+
+/* --------------------------------
+   TEXT CONTENT
+   -------------------------------- */
+.main-start-upcoming-events {
+  display: flex;
+}
+
+.main-start-upcoming-events-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.main-start-upcoming-events-text-box {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.main-start-upcoming-events .main-start-upcoming-events-text-box h2 {
+.main-start-upcoming-events-text-box h3 {
   color: #7D0E61;
 }
-.main-start-upcoming-events .main-start-upcoming-events-text-box .see-all {
+.main-start-upcoming-events-text-box .see-all {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -738,43 +811,59 @@ body {
   font-weight: 700;
   padding: 0.75rem 1.25rem;
 }
-.main-start-upcoming-events .main-start-upcoming-events-text-box .see-all:hover {
+.main-start-upcoming-events-text-box .see-all:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-.main-start-upcoming-events .main-start-upcoming-events-card-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
-}
-.main-start-upcoming-events .main-start-upcoming-events-card-wrapper .main-start-upcoming-events-card {
-  background-color: #C6C3E1;
-  padding: 1.25rem;
-  color: #7D0E61;
+
+.upcoming-events-card-textbox {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.5rem;
+  color: #7D0E61;
 }
-.main-start-upcoming-events .main-start-upcoming-events-card-wrapper .main-start-upcoming-events-card .main-start-upcoming-events-card-text-box {
-  min-height: 0;
-}
-.main-start-upcoming-events .main-start-upcoming-events-card-wrapper .main-start-upcoming-events-card p {
+.upcoming-events-card-textbox p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.main-start-upcoming-events .main-start-upcoming-events-card-wrapper .main-start-upcoming-events-card .main-start-upcoming-events-card-text-box-bottom {
+
+/* --------------------------------
+   BUTTON
+   -------------------------------- */
+.upcoming-events-card-button {
+  align-self: flex-start;
   display: flex;
-  justify-content: left;
-  gap: 0.75rem;
   align-items: center;
-  padding: 0.75rem 0;
+  gap: 0.5rem;
+  background-color: #C6C3E1;
+  color: #7D0E61;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+.upcoming-events-card-button:hover {
+  text-decoration: underline;
 }
 
+/* --------------------------------
+   TABLET (two cards per row)
+   -------------------------------- */
+@media (max-width: 1024px) {
+  .main-start-upcoming-events-card {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+/* --------------------------------
+   MOBILE (one card per row)
+   -------------------------------- */
+@media (max-width: 768px) {
+  .main-start-upcoming-events-card {
+    flex: 1 1 100%;
+  }
+}
 .banderoll-wrapper {
   margin-top: 4rem;
   margin-bottom: 4rem;

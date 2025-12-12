@@ -302,19 +302,96 @@ body {
 }
 
 
+.main-start-upcoming-events {
+    max-width: 1244px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
 
-.main-start-upcoming-events{
-    max-width: 1240px;
-    margin: auto;
-    .main-start-upcoming-events-text-box{
+/* --------------------------------
+   CARD — Desktop: 1/3 width
+   -------------------------------- */
+.main-start-upcoming-events-card {
+    flex: 1 1 calc(33.333% - 2rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    background-color: $surface-primary; // or remove if not needed
+    padding: 1.5rem;
+}
+
+/* --------------------------------
+   IMAGE WRAPPER
+   -------------------------------- */
+.upcoming-events-card-image-wrapper {
+    position: relative;
+    width: 100%;
+
+    .events-card-image-box {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+    .image-tags-wrapper{
+        display: flex;
+        gap: 0.5rem;
+        position: absolute;
+        bottom: 0.25rem;
+        left: 0.25rem;
+        .image-tag-1  {
+        top: 0.75rem;
+        left: 0.75rem;
+        background-color: $surface-CTA;
+        padding: 0.35rem 0.75rem;
+        margin-bottom: 0.5rem;
+
+        h6 {
+            color: $text-primary;
+            // font-weight: 700;
+        }
+        }
+        .image-tag-2  {
+        top: 0.75rem;
+        left: 0.75rem;
+        background-color: $surface-tertiary;
+        padding: 0.35rem 0.75rem;
+        margin-bottom: 0.5rem;
+
+        h6 {
+            color: $text-primary;
+            // font-weight: 700;
+        }
+        }
+    }
+    }
+    
+
+/* --------------------------------
+   TEXT CONTENT
+   -------------------------------- */
+   .main-start-upcoming-events{
+    display: flex;
+   }
+   .main-start-upcoming-events-card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+   }
+   .main-start-upcoming-events-text-box{
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        h2{
+        h3{
             color: $text-primary;
         }
-    .see-all{
+        .see-all{
         display: flex;
         justify-content: center;
         align-items: center;   
@@ -329,51 +406,110 @@ body {
             cursor: pointer;
             text-decoration: underline;
         }
-    }
-    }
-    .main-start-upcoming-events-card-wrapper{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-start;
-
-        gap: 2rem;
-        
-
-        .main-start-upcoming-events-card{
-            background-color: $surface-primary;
-            padding: 1.25rem;
-            color: $text-primary;
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            
-            
-            .main-start-upcoming-events-card-text-box{
-
-            min-height: 0;
-            }
-            
-            p{
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 2;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-        
-
-            .main-start-upcoming-events-card-text-box-bottom{
-                display: flex;
-                justify-content: left;
-                gap: 0.75rem;
-                align-items: center;
-                padding: 0.75rem 0;
-            }
-
         }
     }
+.upcoming-events-card-textbox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: $text-primary;
+
+    p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
+
+/* --------------------------------
+   BUTTON
+   -------------------------------- */
+.upcoming-events-card-button {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: $surface-primary;
+    color: $text-primary;
+    border: none;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* --------------------------------
+   TABLET (two cards per row)
+   -------------------------------- */
+@media (max-width: 1024px) {
+    .main-start-upcoming-events-card {
+        flex: 1 1 calc(50% - 2rem);
+    }
+}
+
+/* --------------------------------
+   MOBILE (one card per row)
+   -------------------------------- */
+@media (max-width: 768px) {
+    .main-start-upcoming-events-card {
+        flex: 1 1 100%;
+    }
+}
+
+
+// .main-start-upcoming-events{
+//     max-width: 1240px;
+//     margin: auto;
+//     
+//     }
+//     .main-start-upcoming-events-card-wrapper{
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: center;
+//         align-items: flex-start;
+
+//         gap: 2rem;
+        
+
+//         .main-start-upcoming-events-card{
+//             background-color: $surface-primary;
+//             padding: 1.25rem;
+//             color: $text-primary;
+//             display: flex;
+//             flex-direction: column;
+//             gap: 0.75rem;
+            
+            
+//             .main-start-upcoming-events-card-text-box{
+
+//             min-height: 0;
+//             }
+            
+//             p{
+//                 display: -webkit-box;
+//                 -webkit-box-orient: vertical;
+//                 -webkit-line-clamp: 2;
+//                 overflow: hidden;
+//                 text-overflow: ellipsis;
+//             }
+        
+
+//             .main-start-upcoming-events-card-text-box-bottom{
+//                 display: flex;
+//                 justify-content: left;
+//                 gap: 0.75rem;
+//                 align-items: center;
+//                 padding: 0.75rem 0;
+//             }
+
+//         }
+//     }
+// }
 
 
 .banderoll-wrapper {
