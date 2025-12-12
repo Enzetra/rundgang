@@ -26,93 +26,127 @@ html {
 /* ===============================
    BREAKPOINT VARIABLES
    =============================== */
-/* ===============================
-   TYPOGRAPHY STYLES
-   =============================== */
+/* =========================================
+   BASE (MOBILE FIRST)
+   ========================================= */
 h1 {
-  font-size: 96px;
+  font-size: 35px;
   font-weight: 900;
-  line-height: 1; /* 128px */
+  line-height: 1;
 }
 
 h2 {
-  font-size: 64px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 1.1; /* 52.8px */
+  line-height: 1.1;
 }
 
 h3 {
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 1; /* 31.2px */
+  line-height: 1;
 }
 
 h4 {
-  font-size: 36px;
+  font-size: 22px;
   font-weight: 500;
-  line-height: 1; /* 62.4px */
+  line-height: 1;
 }
 
 h5 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 1.3; /* 26px */
+  line-height: 1.3;
 }
 
 h6 {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
-  line-height: 1.1; /* 15.6px */
+  line-height: 1.1;
 }
 
 p {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
-  line-height: 1.25; /* 25px */
+  line-height: 1.25;
 }
 
-/* ===============================
-TABLET (≤ 1280px)
-=============================== */
-/* ===============================
-   TABLET PORTRAIT / IPAD (≤ 768px)
-   =============================== */
-/* ===============================
-   MOBILE (≤ 375px)
-   =============================== */
-@media (max-width: 425px) {
+/* =========================================
+   TABLET (≥ 768px)
+   ========================================= */
+@media (min-width: 768px) {
   h1 {
-    font-size: 44px;
+    font-size: 64px;
     font-weight: 900;
-    line-height: 1;
+    line-height: 1; /* same as desktop */
   }
   h2 {
-    font-size: 32px;
+    font-size: 48px;
     font-weight: 700;
     line-height: 1.1;
   }
   h3 {
-    font-size: 20px;
+    font-size: 32px;
     font-weight: 700;
     line-height: 1;
   }
   h4 {
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 500;
     line-height: 1;
   }
   h5 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1.3;
   }
   h6 {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.3;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.1;
   }
   p {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+}
+/* =========================================
+   DESKTOP (≥ 1024px)
+   ========================================= */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 1;
+  }
+  h2 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  h3 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  h4 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  h6 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  p {
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.25;
   }
@@ -178,93 +212,127 @@ html {
 /* ===============================
    BREAKPOINT VARIABLES
    =============================== */
-/* ===============================
-   TYPOGRAPHY STYLES
-   =============================== */
+/* =========================================
+   BASE (MOBILE FIRST)
+   ========================================= */
 h1 {
-  font-size: 96px;
+  font-size: 35px;
   font-weight: 900;
-  line-height: 1; /* 128px */
+  line-height: 1;
 }
 
 h2 {
-  font-size: 64px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 1.1; /* 52.8px */
+  line-height: 1.1;
 }
 
 h3 {
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 1; /* 31.2px */
+  line-height: 1;
 }
 
 h4 {
-  font-size: 36px;
+  font-size: 22px;
   font-weight: 500;
-  line-height: 1; /* 62.4px */
+  line-height: 1;
 }
 
 h5 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 1.3; /* 26px */
+  line-height: 1.3;
 }
 
 h6 {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
-  line-height: 1.1; /* 15.6px */
+  line-height: 1.1;
 }
 
 p {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
-  line-height: 1.25; /* 25px */
+  line-height: 1.25;
 }
 
-/* ===============================
-TABLET (≤ 1280px)
-=============================== */
-/* ===============================
-   TABLET PORTRAIT / IPAD (≤ 768px)
-   =============================== */
-/* ===============================
-   MOBILE (≤ 375px)
-   =============================== */
-@media (max-width: 425px) {
+/* =========================================
+   TABLET (≥ 768px)
+   ========================================= */
+@media (min-width: 768px) {
   h1 {
-    font-size: 44px;
+    font-size: 64px;
     font-weight: 900;
-    line-height: 1;
+    line-height: 1; /* same as desktop */
   }
   h2 {
-    font-size: 32px;
+    font-size: 48px;
     font-weight: 700;
     line-height: 1.1;
   }
   h3 {
-    font-size: 20px;
+    font-size: 32px;
     font-weight: 700;
     line-height: 1;
   }
   h4 {
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 500;
     line-height: 1;
   }
   h5 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1.3;
   }
   h6 {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.3;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.1;
   }
   p {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+}
+/* =========================================
+   DESKTOP (≥ 1024px)
+   ========================================= */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 1;
+  }
+  h2 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  h3 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  h4 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  h6 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  p {
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.25;
   }

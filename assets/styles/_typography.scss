@@ -1,100 +1,137 @@
-/* ===============================
-   TYPOGRAPHY STYLES
-   =============================== */
+/* =========================================
+   BASE (MOBILE FIRST)
+   ========================================= */
+h1 {
+  font-size: 35px;
+  font-weight: 900;
+  line-height: 1;
+}
 
-   h1{
-    font-size: 96px;
-    font-weight: 900;
-    line-height: 1; /* 128px */
-   }
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+}
 
-    h2{
-     font-size: 64px;
-     font-weight: 700;
-     line-height: 1.1; /* 52.8px */
-    }
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+}
 
-    h3{
-     font-size: 40px;
-     font-weight: 700;
-     line-height: 1; /* 31.2px */
-    }
-    h4{
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 1; /* 62.4px */
-    }
-    h5{
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 1.3; /* 26px */
+h4 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+}
 
-    }
-    h6{
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 1.1; /* 15.6px */
-    }
+h5 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
 
-    p{
-     font-size: 20px;
-     font-weight: 500;
-     line-height: 1.25; /* 25px */
-    }
+h6 {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.1;
+}
 
-    /* ===============================
-   TABLET (≤ 1280px)
-   =============================== */
+p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+}
 
-/* ===============================
-   TABLET PORTRAIT / IPAD (≤ 768px)
-   =============================== */
-
-/* ===============================
-   MOBILE (≤ 375px)
-   =============================== */
-
-
-@media (max-width: $breakpoint-mobile) {
-
+/* =========================================
+   TABLET (≥ 768px)
+   ========================================= */
+@media (min-width: 768px) {
   h1 {
-    font-size: 44px;     // from 64px
+    font-size: 64px;
     font-weight: 900;
-    line-height: 1;      // stays consistent
+    line-height: 1;     /* same as desktop */
   }
 
   h2 {
-    font-size: 32px;     // from 48px
+    font-size: 48px;
     font-weight: 700;
     line-height: 1.1;
   }
 
   h3 {
-    font-size: 20px;     // from 40px
+    font-size: 32px;
     font-weight: 700;
     line-height: 1;
   }
 
   h4 {
-    font-size: 22px;     // from 36px
+    font-size: 28px;
     font-weight: 500;
     line-height: 1;
   }
 
   h5 {
-    font-size: 16px;     // from 20px
+    font-size: 18px;
     font-weight: 700;
     line-height: 1.3;
   }
 
   h6 {
-    font-size: 12px;     // from 14px
-    font-weight: 500;
-    line-height: 1.3;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.1;
   }
 
   p {
-    font-size: 16px;     // from 20px
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+}
+
+/* =========================================
+   DESKTOP (≥ 1024px)
+   ========================================= */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  h3 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  h4 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  h5 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  h6 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  p {
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.25;
   }
