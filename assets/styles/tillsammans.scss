@@ -56,6 +56,10 @@ body {
     .membership_signup_section{
         padding: 7rem 7rem;
         position: relative;
+        overflow-x: hidden;
+            @media (max-width: $breakpoint-tablet){
+                padding: 3.5rem;
+            }
             @media (max-width: $breakpoint-mobile) {
                 padding: 1rem ;
             }
@@ -91,8 +95,29 @@ body {
 -------------------------------- */
         .jacket{
             position: absolute;
-            top: 70px;
-            right: 270px;
+            top: 10%;
+            right: 15%;
+            z-index: -1;
+
+            @media (max-width : 1106px){
+                right: 10%;
+            }
+
+            @media (max-width : 1024px){
+                right: 5%;
+            }
+            @media (max-width : 778px){
+                right: -20%;
+            }
+
+            @media (max-width : 679px){
+                right: -20%;
+                opacity: 20%;
+            }
+
+            @media (max-width : 552px){
+                display: none;
+            }
 
             img{
             width: 16.779rem;
@@ -103,7 +128,9 @@ body {
         }
     }
 }
-
+/* --------------------------------
+   BUTTONS
+-------------------------------- */
 
 .membership_button {
     display: flex;

@@ -1738,12 +1738,18 @@ body {
 .container .membership_signup_section {
   padding: 7rem 7rem;
   position: relative;
+  overflow-x: hidden;
   /* --------------------------------
     TEXT
      -------------------------------- */
   /* --------------------------------
       JACKA
   -------------------------------- */
+}
+@media (max-width: 920px) {
+  .container .membership_signup_section {
+    padding: 3.5rem;
+  }
 }
 @media (max-width: 531px) {
   .container .membership_signup_section {
@@ -1773,8 +1779,35 @@ body {
 }
 .container .membership_signup_section .jacket {
   position: absolute;
-  top: 70px;
-  right: 270px;
+  top: 10%;
+  right: 15%;
+  z-index: -1;
+}
+@media (max-width: 1106px) {
+  .container .membership_signup_section .jacket {
+    right: 10%;
+  }
+}
+@media (max-width: 1024px) {
+  .container .membership_signup_section .jacket {
+    right: 5%;
+  }
+}
+@media (max-width: 778px) {
+  .container .membership_signup_section .jacket {
+    right: -20%;
+  }
+}
+@media (max-width: 679px) {
+  .container .membership_signup_section .jacket {
+    right: -20%;
+    opacity: 20%;
+  }
+}
+@media (max-width: 552px) {
+  .container .membership_signup_section .jacket {
+    display: none;
+  }
 }
 .container .membership_signup_section .jacket img {
   width: 16.779rem;
@@ -1783,6 +1816,9 @@ body {
   aspect-ratio: 268.47/335.37;
 }
 
+/* --------------------------------
+   BUTTONS
+-------------------------------- */
 .membership_button {
   display: flex;
   align-items: flex-end;

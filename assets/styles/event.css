@@ -1383,6 +1383,8 @@ body {
   font-weight: 700;
   padding: 0.75rem 1.25rem;
   margin-top: 2rem;
+  text-decoration: none;
+  max-width: 70%;
 }
 .main-start-membership .main-start-membership-text-box .read-more:hover {
   cursor: pointer;
@@ -1534,6 +1536,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   padding: 0.75rem 1.25rem;
+  text-decoration: none;
   /* MOBILE VERSION (≤ 768px) */
 }
 .main-start-upcoming-events-text-box .see-all:hover {
@@ -1568,6 +1571,7 @@ body {
   border: none;
   font-weight: 700;
   padding: 0.5rem;
+  text-decoration: none;
   cursor: pointer;
 }
 .upcoming-events-card-button:hover {
