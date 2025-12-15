@@ -4,6 +4,10 @@
 @import 'layout.scss';
 @import 'main.scss';
 
+/* --------------------------------
+   GENERAL 
+   -------------------------------- */
+
 body {
     background-color: $surface-background;
     //temp height
@@ -22,6 +26,9 @@ body {
     display:flex;
     flex-direction: column;
     gap: 1.25rem;
+/* --------------------------------
+  HERO
+   -------------------------------- */
 
    .hero{
         position: relative;
@@ -44,17 +51,18 @@ body {
             left: 50%;
             top: 50%;
             transform: translate(-50%,-50%);
-
-        }
-        
+        }   
    }
+
+   /* --------------------------------
+   CARDS 
+   -------------------------------- */
 
    .kommande-events{
     padding: 0rem 1rem;
 
         h2{
-            padding: 2.375rem 0rem;
-            
+            padding: 2.375rem 0rem; 
         }
 
         .cards-events{
@@ -63,6 +71,9 @@ body {
             gap: 2rem;
             width: 100%;
 
+    /* --------------------------------
+   CARD itself
+   -------------------------------- */
             .card-events{
                 display: flex;
                 justify-content: start;
@@ -74,13 +85,14 @@ body {
                 @media (max-width: $breakpoint-tablet){
                     flex-direction: column;
                 }
-
+/* --------------------------------
+CARD picture
+-------------------------------- */
                 .card-image{
                     width: 30%;
                     @media (max-width: $breakpoint-tablet){
                         min-width: 100%; 
                         position: relative;
-                       
                     }
                     img{
                         width: 100%;
@@ -91,24 +103,39 @@ body {
                     }
                     .mobile{
                         display: none;
+ /* --------------------------------
+BUTTON on the picture in mobile
+-------------------------------- */
                         @media (max-width: $breakpoint-tablet){
                             display:flex; 
                             gap: 1rem;
-                            z-index: 9999;
+                            z-index: 997;
                             position: absolute;
                             bottom: 2rem;
                             left: 1rem;
-                        
+
+                            .buttons-pink, 
+                            .buttons-yellow{
+                            font-size: 10.745px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 100%;
+                            }
                         }
                     }
                 }  
-                
+/* --------------------------------
+CARD text
+-------------------------------- */
                 .card-text{
                     display: flex;
                     flex-direction: column;
                     align-content: stretch;
                     gap: 0.5rem;
                     width: 100%;
+/* --------------------------------
+   TEXT adress, tittle and date
+ -------------------------------- */                    
 
                     .card-text-top{
                         display: flex;
@@ -116,37 +143,60 @@ body {
                         align-content:flex-start;
                         gap: 0.5rem;
                     }
+/* --------------------------------
+   TEXT content, link and buttons
+-------------------------------- */                    
 
                     .card-text-bottom{
                         width: 100%;
                         display: flex;
                         justify-content: space-between;
 
+/* --------------------------------
+   CONTENT
+-------------------------------- */                        
+
                         .card-info{
                             max-width: 474px;
                             display: flex;
                             flex-direction: column;
-                            align-content: flex-start;
+                            align-content: center;
                             gap: 1.5rem;
 
                             @media (max-width: $breakpoint-tablet){
+                                max-width: 100%; 
+
                                 p{
                                 display: -webkit-box;
                                 -webkit-box-orient: vertical;
                                 -webkit-line-clamp: 2;
                                  overflow: hidden;
-                                text-overflow: ellipsis;
                                 }
+                            }
+/* --------------------------------
+   LÄS MER
+-------------------------------- */ 
+                            .läsmer{
+                                display:none;
+                            }
+
+                            @media (max-width: $breakpoint-tablet){
 
                                 .läsmer{
+                                    display: flex;
+                                    align-self: center;
                                     text-align: center;
                                 }
 
                                 .desktop{
                                     display: none;
-                                }
+                                }    
+                            }
                         }
-                        }
+
+/* --------------------------------
+   BUTTONS in desktop
+-------------------------------- */ 
 
                         .card-buttons{
                             display: flex;
@@ -167,21 +217,21 @@ body {
                                }
 
                             }
-
                         }
+/* --------------------------------
+   LÄS MER in desktop 
+-------------------------------- */ 
+                        
                         .opacite-null{
                             opacity: 0%;
                         }
-
                     }
-        
                 }
-
-            }
-                
+            }      
         }
-    }
-
+/* --------------------------------
+   BUTTONS style
+-------------------------------- */ 
     .buttons-pink{
         background-color: $silke-light;
         border: none;
@@ -193,17 +243,29 @@ body {
         border: none;
         padding: 0.5rem;
         color: $text-primary;
-    }
-
+    } 
+}
+/* --------------------------------
+   BUBBLE 
+-------------------------------- */ 
    .little-message{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     place-items: center;
-
+    @media (max-width: $breakpoint-tablet){
+        grid-template-columns: repeat(2,1fr);
+    }
+    @media (max-width: $breakpoint-mobile){
+        grid-template-columns: repeat(1,1fr);
+    }
+    
     > * {
-    grid-area: 1 / 1; 
-}
+    grid-area: 1 / 1; /* to put the picture and the text in the same case of the grid*/
+    }
 
+/* --------------------------------
+   BUBBLE image
+-------------------------------- */     
         .image{
             z-index: 1;
 
@@ -211,8 +273,16 @@ body {
             width: 100%; 
             height: auto;
             margin: 10% 0 0 5%;
+            @media (max-width: $breakpoint-mobile){
+                width: 80%;
+                margin:10% 0 0 4%;
+            }
             }
         }
+
+/* --------------------------------
+   BUBBLE text
+-------------------------------- */ 
 
         .message-text{
             width: 100%;
@@ -221,7 +291,15 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            
+
+
+            @media (max-width: $breakpoint-tablet){
+                padding: 15rem 0rem 11rem 2rem; 
+            }
+            @media (max-width: $breakpoint-tablet){
+                padding: 15rem 1rem 11rem 0rem; 
+            }
+
             h2, 
             p,
             a{
@@ -241,6 +319,39 @@ body {
                 text-underline-offset: auto;
                 text-underline-position: from-font;
             }
+/* --------------------------------
+   BUBBLE text in mobile 
+-------------------------------- */ 
+            @media (max-width: $breakpoint-mobile){
+                h2{
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 100%;
+                }
+                p{
+                    text-align: center;
+                    font-family: "Darker Grotesque";
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 120%;
+                }
+                a{
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 120%; /* 15.6px */
+                    text-decoration-line: underline;
+                    text-decoration-style: solid;
+                    text-decoration-skip-ink: none;
+                    text-decoration-thickness: auto;
+                    text-underline-offset: auto;
+                    text-underline-position: from-font;
+                    padding: 0.5rem;
+                }
+            }
+
         }
         
    }

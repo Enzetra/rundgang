@@ -1686,6 +1686,9 @@ body {
   background-image: url(/assets/img/pictures/samarbete-card-pic.png);
 }
 
+/* --------------------------------
+   GENERAL 
+   -------------------------------- */
 body {
   background-color: #EAE6F4;
   min-height: 100vh;
@@ -1703,6 +1706,15 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  /* --------------------------------
+    HERO
+     -------------------------------- */
+  /* --------------------------------
+  CARDS 
+  -------------------------------- */
+  /* --------------------------------
+     BUBBLE 
+  -------------------------------- */
 }
 .container .hero {
   position: relative;
@@ -1728,6 +1740,9 @@ body {
 }
 .container .kommande-events {
   padding: 0rem 1rem;
+  /* --------------------------------
+     BUTTONS style
+  -------------------------------- */
 }
 .container .kommande-events h2 {
   padding: 2.375rem 0rem;
@@ -1737,6 +1752,9 @@ body {
   flex-direction: column;
   gap: 2rem;
   width: 100%;
+  /* --------------------------------
+  CARD itself
+  -------------------------------- */
 }
 .container .kommande-events .cards-events .card-events {
   display: flex;
@@ -1745,6 +1763,12 @@ body {
   background-color: #C6C3E1;
   padding: 2.5rem;
   width: 100%;
+  /* --------------------------------
+  CARD picture
+  -------------------------------- */
+  /* --------------------------------
+  CARD text
+  -------------------------------- */
 }
 @media (max-width: 920px) {
   .container .kommande-events .cards-events .card-events {
@@ -1771,15 +1795,25 @@ body {
 }
 .container .kommande-events .cards-events .card-events .card-image .mobile {
   display: none;
+  /* --------------------------------
+  BUTTON on the picture in mobile
+  -------------------------------- */
 }
 @media (max-width: 920px) {
   .container .kommande-events .cards-events .card-events .card-image .mobile {
     display: flex;
     gap: 1rem;
-    z-index: 9999;
+    z-index: 997;
     position: absolute;
     bottom: 2rem;
     left: 1rem;
+  }
+  .container .kommande-events .cards-events .card-events .card-image .mobile .buttons-pink,
+  .container .kommande-events .cards-events .card-events .card-image .mobile .buttons-yellow {
+    font-size: 10.745px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
   }
 }
 .container .kommande-events .cards-events .card-events .card-text {
@@ -1788,6 +1822,12 @@ body {
   align-content: stretch;
   gap: 0.5rem;
   width: 100%;
+  /* --------------------------------
+     TEXT adress, tittle and date
+   -------------------------------- */
+  /* --------------------------------
+     TEXT content, link and buttons
+  -------------------------------- */
 }
 .container .kommande-events .cards-events .card-events .card-text .card-text-top {
   display: flex;
@@ -1799,23 +1839,44 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  /* --------------------------------
+     CONTENT
+  -------------------------------- */
+  /* --------------------------------
+     BUTTONS in desktop
+  -------------------------------- */
+  /* --------------------------------
+     LÄS MER in desktop 
+  -------------------------------- */
 }
 .container .kommande-events .cards-events .card-events .card-text .card-text-bottom .card-info {
   max-width: 474px;
   display: flex;
   flex-direction: column;
-  align-content: flex-start;
+  align-content: center;
   gap: 1.5rem;
+  /* --------------------------------
+     LÄS MER
+  -------------------------------- */
 }
 @media (max-width: 920px) {
+  .container .kommande-events .cards-events .card-events .card-text .card-text-bottom .card-info {
+    max-width: 100%;
+  }
   .container .kommande-events .cards-events .card-events .card-text .card-text-bottom .card-info p {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
-    text-overflow: ellipsis;
   }
+}
+.container .kommande-events .cards-events .card-events .card-text .card-text-bottom .card-info .läsmer {
+  display: none;
+}
+@media (max-width: 920px) {
   .container .kommande-events .cards-events .card-events .card-text .card-text-bottom .card-info .läsmer {
+    display: flex;
+    align-self: center;
     text-align: center;
   }
   .container .kommande-events .cards-events .card-events .card-text .card-text-bottom .card-info .desktop {
@@ -1845,13 +1906,13 @@ body {
 .container .kommande-events .cards-events .card-events .card-text .card-text-bottom .opacite-null {
   opacity: 0%;
 }
-.container .buttons-pink {
+.container .kommande-events .buttons-pink {
   background-color: #ED91C2;
   border: none;
   padding: 0.5rem;
   color: #7D0E61;
 }
-.container .buttons-yellow {
+.container .kommande-events .buttons-yellow {
   background-color: #D3E18D;
   border: none;
   padding: 0.5rem;
@@ -1861,9 +1922,25 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
+  /* --------------------------------
+     BUBBLE image
+  -------------------------------- */
+  /* --------------------------------
+     BUBBLE text
+  -------------------------------- */
+}
+@media (max-width: 920px) {
+  .container .little-message {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 531px) {
+  .container .little-message {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .container .little-message > * {
-  grid-area: 1/1;
+  grid-area: 1/1; /* to put the picture and the text in the same case of the grid*/
 }
 .container .little-message .image {
   z-index: 1;
@@ -1873,6 +1950,12 @@ body {
   height: auto;
   margin: 10% 0 0 5%;
 }
+@media (max-width: 531px) {
+  .container .little-message .image img {
+    width: 80%;
+    margin: 10% 0 0 4%;
+  }
+}
 .container .little-message .message-text {
   width: 100%;
   padding: 11rem 4rem 10rem 6rem;
@@ -1880,6 +1963,19 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  /* --------------------------------
+     BUBBLE text in mobile 
+  -------------------------------- */
+}
+@media (max-width: 920px) {
+  .container .little-message .message-text {
+    padding: 15rem 0rem 11rem 2rem;
+  }
+}
+@media (max-width: 920px) {
+  .container .little-message .message-text {
+    padding: 15rem 1rem 11rem 0rem;
+  }
 }
 .container .little-message .message-text h2,
 .container .little-message .message-text p,
@@ -1899,4 +1995,34 @@ body {
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
+}
+@media (max-width: 531px) {
+  .container .little-message .message-text h2 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+  }
+  .container .little-message .message-text p {
+    text-align: center;
+    font-family: "Darker Grotesque";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+  }
+  .container .little-message .message-text a {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 15.6px */
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    -webkit-text-decoration-skip-ink: none;
+            text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    padding: 0.5rem;
+  }
 }/*# sourceMappingURL=event.css.map */
