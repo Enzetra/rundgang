@@ -1763,4 +1763,77 @@ body {
 }
 .container .membership_signup_section .membership-text p {
   align-self: stretch;
+}
+
+.membership_button {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+  max-width: 100%;
+}
+
+/* Email form */
+.membership_button form {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Email input */
+.input-email {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-family: "Darker Grotesque";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 100%;
+  color: #A4ABC9;
+  border-radius: 0;
+  text-align: center;
+  border: 2px solid #7D0E61;
+  background-color: #EAE6F4;
+}
+
+.email-input {
+  display: none;
+}
+
+/* CTA link styled as button */
+.bli-medlem {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  white-space: nowrap;
+  gap: 1rem;
+  padding: 1rem 1rem;
+  font-family: "Darker Grotesque";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 100%;
+  background-color: #E578B7;
+  color: #7D0E61;
+}
+
+/* Optional arrow alignment */
+.membership_button img {
+  align-self: center;
+}
+
+/* -----------------------------------------
+   TABLET + MOBILE (≤ 1024px)
+   ----------------------------------------- */
+@media (max-width: 1024px) {
+  .membership_button {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .membership_button form,
+  .bli-medlem {
+    width: 100%;
+  }
+  .membership_button img {
+    align-self: flex-start;
+  }
 }/*# sourceMappingURL=tillsammans.css.map */
