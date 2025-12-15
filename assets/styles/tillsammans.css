@@ -1736,34 +1736,31 @@ body {
   transform: translate(-50%, -50%);
 }
 .container .membership_signup_section {
-  padding: 0rem 1rem;
+  padding: 7rem 7rem;
 }
-
-.membership_button {
+@media (max-width: 531px) {
+  .container .membership_signup_section {
+    padding: 1rem;
+  }
+}
+.container .membership_signup_section h2 {
+  max-width: 39.563rem;
+  max-height: 7.75rem;
+  align-self: stretch;
+}
+.container .membership_signup_section .membership-text {
+  margin: 1.5rem 0 4.25rem 0;
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  max-width: 31.25rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
 }
-.membership_button .email-input {
-  display: none;
+@media (max-width: 531px) {
+  .container .membership_signup_section .membership-text {
+    margin: 1rem 1rem 1rem 0;
+  }
 }
-.membership_button .input-email {
-  font-family: "Darker Grotesque";
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 100%;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.membership_button .bli-medlem {
-  font-family: "Darker Grotesque";
-  flex: 0 0 50%;
-  display: flex;
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 100%;
-  color: #7D0E61;
+.container .membership_signup_section .membership-text p {
+  align-self: stretch;
 }/*# sourceMappingURL=tillsammans.css.map */

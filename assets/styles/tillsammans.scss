@@ -54,42 +54,32 @@ body {
    -------------------------------- */
 
     .membership_signup_section{
-        padding: 0rem 1rem;
+        padding: 7rem 7rem;
+            @media (max-width: $breakpoint-mobile) {
+                padding: 1rem ;
+            }
+            
+        h2{
+            max-width: 39.563rem;
+            max-height: 7.75rem;
+            align-self: stretch;
+        }
+        .membership-text{
+            margin: 1.5rem 0 4.25rem 0;
+            display: flex;
+            max-width: 31.25rem;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.75rem;
+
+            @media (max-width: $breakpoint-mobile) {
+                margin: 1rem 1rem 1rem 0; 
+            }
+
+            p{
+                align-self: stretch;
+            }
+        }
+
     }
 }
-
-
-.membership_button{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-
-.email-input{
-   display: none;
-}
-.input-email{
-    font-family: 'Darker Grotesque';
-    font-size: 26px;
-        font-weight: 700;
-        line-height: 100%;
-        border: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: $;
-}
-
-    .bli-medlem{
-        font-family: 'Darker Grotesque';
-        flex: 0 0 50%;
-        display: flex;
-        font-size: 26px;
-        font-weight: 700;
-        line-height: 100%;
-        color: $text-primary;
-    }
-}
-
-
-
