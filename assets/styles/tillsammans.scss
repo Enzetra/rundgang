@@ -55,10 +55,14 @@ body {
 
     .membership_signup_section{
         padding: 7rem 7rem;
+        position: relative;
             @media (max-width: $breakpoint-mobile) {
                 padding: 1rem ;
             }
             
+/* --------------------------------
+  TEXT
+   -------------------------------- */
         h2{
             max-width: 39.563rem;
             max-height: 7.75rem;
@@ -82,7 +86,21 @@ body {
                 align-self: stretch;
             }
         }
+/* --------------------------------
+    JACKA
+-------------------------------- */
+        .jacket{
+            position: absolute;
+            top: 70px;
+            right: 270px;
 
+            img{
+            width: 16.779rem;
+            height: auto;
+            transform: rotate(8.594deg);
+            aspect-ratio: 268.47/335.37;
+            }
+        }
     }
 }
 
