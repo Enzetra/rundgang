@@ -1383,6 +1383,8 @@ body {
   font-weight: 700;
   padding: 0.75rem 1.25rem;
   margin-top: 2rem;
+  text-decoration: none;
+  max-width: 70%;
 }
 .main-start-membership .main-start-membership-text-box .read-more:hover {
   cursor: pointer;
@@ -1534,6 +1536,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   padding: 0.75rem 1.25rem;
+  text-decoration: none;
   /* MOBILE VERSION (≤ 768px) */
 }
 .main-start-upcoming-events-text-box .see-all:hover {
@@ -1568,6 +1571,7 @@ body {
   border: none;
   font-weight: 700;
   padding: 0.5rem;
+  text-decoration: none;
   cursor: pointer;
 }
 .upcoming-events-card-button:hover {
@@ -1733,4 +1737,33 @@ body {
 }
 .container .membership_signup_section {
   padding: 0rem 1rem;
+}
+
+.membership_button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.membership_button .email-input {
+  display: none;
+}
+.membership_button .input-email {
+  font-family: "Darker Grotesque";
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 100%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.membership_button .bli-medlem {
+  font-family: "Darker Grotesque";
+  flex: 0 0 50%;
+  display: flex;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 100%;
+  color: #7D0E61;
 }/*# sourceMappingURL=tillsammans.css.map */

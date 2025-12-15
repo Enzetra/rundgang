@@ -57,4 +57,39 @@ body {
         padding: 0rem 1rem;
     }
 }
+
+
+.membership_button{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+.email-input{
+   display: none;
 }
+.input-email{
+    font-family: 'Darker Grotesque';
+    font-size: 26px;
+        font-weight: 700;
+        line-height: 100%;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: $;
+}
+
+    .bli-medlem{
+        font-family: 'Darker Grotesque';
+        flex: 0 0 50%;
+        display: flex;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 100%;
+        color: $text-primary;
+    }
+}
+
+
+
